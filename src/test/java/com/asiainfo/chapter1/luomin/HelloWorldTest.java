@@ -1,20 +1,55 @@
-package com.asiainfo.chapter1.luomin;
+package com.asiainfo.chapter1.luomin; 
 
-import org.junit.Test;
+import org.junit.Test; 
+import org.junit.Before; 
+import org.junit.After; 
 
-import static org.junit.Assert.*;
+/** 
+* HelloWorld Tester. 
+* 
+* @author Luoo
+* @since 07/26/2017 
+* @version 1.0 
+*/ 
+public class HelloWorldTest { 
 
-/**
- * Created by Luoo on 2017/7/25.
- */
-public class HelloWorldTest {
-    @Test
-    public void change() throws Exception {
-        HelloWorld.Hello h1 = new HelloWorld.Hello("h1");
-        HelloWorld.Hello h2 = new HelloWorld.Hello("h2");
+@Before
+public void before() throws Exception { 
+} 
+
+@After
+public void after() throws Exception { 
+} 
+
+/** 
+* 
+* Method: change(Hello h1, Hello h2) 
+* 
+*/ 
+@Test
+public void testChange() throws Exception { 
+//TODO: Test goes here... 
+} 
+
+/** 
+* 
+* Method: main(String[] args) 
+* 
+*/ 
+@Test
+public void testMain() throws Exception { 
+//TODO: Test goes here... 
+} 
+
+/** 
+* 
+* Method: toString() 
+* 
+*/ 
+@Test
+public void testToString() throws Exception { 
+//TODO: Test goes here... 
+} 
 
 
-        assertEquals("1111",HelloWorld.change(h1,h2));
-    }
-
-}
+} 

@@ -14,12 +14,12 @@ public class Exercise {
     public static  void  main(String[] args){
         //counter();
         //grade();
-        //game();
+       //game();
         //suiji();
         //cheng();
         //zu();
-        //rzu();
-        maopao();
+        rzu();
+        //maopao();
 
     }
     //收银系统
@@ -139,10 +139,10 @@ public class Exercise {
         int[] a={10,60,12,55,66,88,99,77,22,33};
 
         System.out.println("数组中的数据为："+Arrays.toString(a));
-        //int[] b=Arrays.copyOf(a,11);
-        int[] b=new int[11];
-        for(int i=0;i<10;i++){
-        b[i]=a[i];}
+        int[] b=Arrays.copyOf(a,11);
+        //int[] b=new int[11];
+        //for(int i=0;i<10;i++){
+        //b[i]=a[i];}
         int max=b[0];
         for(int i=1;i<10;i++){
             if(a[i]>max){
