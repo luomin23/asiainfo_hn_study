@@ -22,6 +22,7 @@ public class demo4 {
         return hour;
     }
     public void setHour(int h) {
+        hour=h;
         hour=((h>=0&& h<24) ?h:0);
     }
     public int getMinute() {
@@ -42,4 +43,6 @@ public class demo4 {
     public String toString(){
         return String.format("%d:%02d:%02d %s",((getHour() == 0 || getHour()== 12)? 12:getHour()%12) ,getMinute() , getSecond(), (getHour()<12? "AM":"PM"));
     }
+
+
 }
