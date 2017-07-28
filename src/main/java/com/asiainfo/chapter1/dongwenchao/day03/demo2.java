@@ -15,8 +15,8 @@ public class demo2 {
 
     public demo2() {//构造器
     }
-    public void empAge(int empAge){
-        age =  empAge;
+    public demo2(int empAge){
+        this.age =  empAge;
         System.out.println("年龄:" + age );
     }
     public void empDesignation(String empDesig){
@@ -29,6 +29,7 @@ public class demo2 {
     }
     public static void main(String[] args){
         demo2 a=new demo2("董稳超");
+        demo2 a1=new demo2(15);
         /*a.empAge(15);*/
         a.empDesignation("开发");
         a.empSalary(4500);

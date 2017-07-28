@@ -5,7 +5,7 @@ package com.asiainfo.chapter1.dongwenchao.day03;
  */
 public class demo4Test {
     public static void main(String [] agrs){
-        demo4 t1=new demo4(1,2,3);
+        demo4 t1=new demo4(15,36,42);
         demo4 t2=new demo4(15,36,42);
         demo4 t3=new demo4(t2);
         System.out.printf("%s\n",t1.toUniversalString());
