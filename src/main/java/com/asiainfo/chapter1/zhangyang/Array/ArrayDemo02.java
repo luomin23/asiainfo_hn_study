@@ -1,4 +1,4 @@
-package com.asiainfo.Array;
+package com.asiainfo.chapter1.zhangyang.Array;
 
 import java.util.Arrays;
 
@@ -6,14 +6,14 @@ public class ArrayDemo02 {
 	public static void main(String[] args) {
 		int[] nums = { 1, 2, 3, 4 };
 		String arrString = Arrays.toString(nums);
-		// Ê¹ÓÃArrayµÄtoString·½·¨´òÓ¡Êä³öÊý×éµÄÄÚÈÝ
-		//toString·½·¨Ö÷ÒªÊÇ½«Êý×é×ª»»Îª×Ö·û´®ÐÎÊÆÊä³ö
+		// Ê¹ï¿½ï¿½Arrayï¿½ï¿½toStringï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//toStringï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Îªï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		System.out.println(arrString);
-		//Ê¹ÓÃforÑ­»·±éÀúÊý×éÔªËØ
+		//Ê¹ï¿½ï¿½forÑ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 		for(int i=0;i<nums.length;i++){
 			System.out.print(i+"\n");
 		}
-		//¼ÓÇ¿ÐÍforÑ­»·±éÀúÊý×é
+		//ï¿½ï¿½Ç¿ï¿½ï¿½forÑ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		int [] num = {11,22,33};
 		for(int i:num){
 			System.out.println(i);

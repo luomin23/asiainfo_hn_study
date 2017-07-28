@@ -1,10 +1,10 @@
-package com.asiainfo.Array;
+package com.asiainfo.chapter1.zhangyang.Array;
 import java.util.Arrays;
 
 public class ArrayDemo03 {
 	public static void main(String[] args) {
 		String [] str = {"a","b","c","d"};
-		//Ê¹ÓÃArraysÖĞµÄ·½·¨ÅĞ¶ÏÊı×äÖĞÊÇ·ñ´æÔÚÄ³¸öÔªËØ
+		//Ê¹ï¿½ï¿½Arraysï¿½ĞµÄ·ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½Ôªï¿½ï¿½
 		boolean boo = Arrays.asList(str).contains("b");
 		System.out.println(boo);
 	}
