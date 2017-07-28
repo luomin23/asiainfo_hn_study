@@ -1,7 +1,5 @@
 package com.asiainfo.chapter1.liuwy.four;
 
-import com.asiainfo.chapter1.liuwy.three.Employee;
-
 /**
  * Created by LENOVO on 2017/7/27.
  */
