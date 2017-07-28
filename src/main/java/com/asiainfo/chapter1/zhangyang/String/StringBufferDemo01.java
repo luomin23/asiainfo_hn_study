@@ -1,10 +1,10 @@
-package com.asiainfo.String;
+package com.asiainfo.chapter1.zhangyang.String;
 
 public class StringBufferDemo01 {
 	public static void main(String[] args) {
-		StringBuffer sBuffer = new StringBuffer("ÎÒµÄÐÕÃû£º");
-		sBuffer.append("ÕÅÑï");
-		sBuffer.append("£¬ÄêÁä");
+		StringBuffer sBuffer = new StringBuffer("ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		sBuffer.append("ï¿½ï¿½ï¿½ï¿½");
+		sBuffer.append("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		sBuffer.append("21");
 		System.out.println(sBuffer);
 	}

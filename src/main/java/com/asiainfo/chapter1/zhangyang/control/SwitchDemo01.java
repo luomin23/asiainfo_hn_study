@@ -1,24 +1,24 @@
-package com.asiainfo.control;
+package com.asiainfo.chapter1.zhangyang.control;
 
 public class SwitchDemo01 {
 	public static void main(String args[]) {
 		int grade = 80;
 		switch (grade) {
 		case 90:
-			System.out.println("ÓÅÐã");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½");
 			break;
 		case 80:
 		case 75:
-			System.out.println("Á¼ºÃ");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½");
 			break;
 		case 60:
-			System.out.println("¼°¸ñ");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½");
 		case 55:
-			System.out.println("ÄãÐèÒªÔÙÅ¬Á¦Å¬Á¦");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Å¬ï¿½ï¿½Å¬ï¿½ï¿½");
 			break;
 		default:
-			System.out.println("Î´ÖªµÈ¼¶");
+			System.out.println("Î´Öªï¿½È¼ï¿½");
 		}
-		System.out.println("ÄãµÄ·ÖÊýÊÇ " + grade);
+		System.out.println("ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ " + grade);
 	}
 }

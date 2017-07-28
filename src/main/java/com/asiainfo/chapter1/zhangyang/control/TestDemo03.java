@@ -1,15 +1,15 @@
-package com.asiainfo.control;
+package com.asiainfo.chapter1.zhangyang.control;
 public class TestDemo03 {
 	public static void main(String args[]) {
 		int x = 30;
 		if (x == 10) {
-			System.out.print("ÕæÊµÖµÎª10");
+			System.out.print("ï¿½ï¿½ÊµÖµÎª10");
 		} else if (x == 20) {
-			System.out.print("ÕæÊµÖµÎª 20");
+			System.out.print("ï¿½ï¿½ÊµÖµÎª 20");
 		} else if (x == 30) {
-			System.out.print("ÕæÊµÖµÎª 30");
+			System.out.print("ï¿½ï¿½ÊµÖµÎª 30");
 		} else {
-			System.out.print("ÕâÊÇ else Óï¾ä");
+			System.out.print("ï¿½ï¿½ï¿½ï¿½ else ï¿½ï¿½ï¿½");
 		}
 	}
 }

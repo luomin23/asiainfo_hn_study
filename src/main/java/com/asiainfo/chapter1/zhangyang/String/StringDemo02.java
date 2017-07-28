@@ -1,6 +1,6 @@
-package com.asiainfo.String;
-//String ÀàµÄÒ»¸ö·ÃÎÊÆ÷·½·¨ÊÇ length() ·½·¨£¬
-//Ëü·µ»Ø×Ö·û´®¶ÔÏó°üº¬µÄ×Ö·ûÊý¡£
+package com.asiainfo.chapter1.zhangyang.String;
+//String ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ length() ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
 public class StringDemo02 {
     public static void main(String args[]) {
         String str = "zhangyang";

@@ -1,4 +1,4 @@
-package com.asiainfo.PackingUnpacking;
+package com.asiainfo.chapter1.zhangyang.PackingUnpacking;
 
 public class TestDemo01 {
 

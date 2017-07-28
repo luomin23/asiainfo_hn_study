@@ -1,8 +1,8 @@
-package com.asiainfo.String;
-//Á¬½Ó×Ö·û´®
+package com.asiainfo.chapter1.zhangyang.String;
+//ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 public class StringDemo03 {
     public static void main(String args[]) {     
-        String str = "ÕÅÑï";     
-        System.out.println("ÎÒ½Ð" + str);  
+        String str = "ï¿½ï¿½ï¿½ï¿½";     
+        System.out.println("ï¿½Ò½ï¿½" + str);  
     }
 }

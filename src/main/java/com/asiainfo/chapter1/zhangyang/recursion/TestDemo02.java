@@ -1,5 +1,5 @@
-package com.asiainfo.recursion;
-//Ê¹ÓÃµÝ¹éËã·¨´òÓ¡¾Å¾Å³Ë·¨±í
+package com.asiainfo.chapter1.zhangyang.recursion;
+//Ê¹ï¿½ÃµÝ¹ï¿½ï¿½ã·¨ï¿½ï¿½Ó¡ï¿½Å¾Å³Ë·ï¿½ï¿½ï¿½
 public class TestDemo02 {
 	public static void main(String[] args) {
 		method1(9);

@@ -1,4 +1,4 @@
-package com.asiainfo.String;
+package com.asiainfo.chapter1.zhangyang.String;
 
 public class StringDemo01 {
 	public static void main(String args[]) {

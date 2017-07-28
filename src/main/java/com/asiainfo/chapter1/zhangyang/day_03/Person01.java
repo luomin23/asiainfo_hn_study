@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.zhangyang.zyjavaday_01.day_03;
+package com.asiainfo.chapter1.zhangyang.day_03;
 
 /**
  * Created by 11 on 2017/7/26.

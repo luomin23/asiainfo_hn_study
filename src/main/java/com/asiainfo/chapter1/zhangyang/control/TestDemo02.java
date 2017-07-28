@@ -1,12 +1,12 @@
-package com.asiainfo.control;
+package com.asiainfo.chapter1.zhangyang.control;
 
 public class TestDemo02 {
 	public static void main(String[] args) {
 		int y = 2;
 		if (y > 10) {
-			System.out.println("ÕâÊÇifÓï¾ä");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ifï¿½ï¿½ï¿½");
 		} else {
-			System.out.println("ÕâÊÇelseÓï¾ä");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½elseï¿½ï¿½ï¿½");
 		}
 	}
 }

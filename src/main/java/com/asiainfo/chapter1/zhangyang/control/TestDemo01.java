@@ -1,10 +1,10 @@
-package com.asiainfo.control;
+package com.asiainfo.chapter1.zhangyang.control;
 
 class TestDemo01 {
 	public static void main(String[] args) {
 		int x=10;
 		if(x<=10){
-			System.out.println("ÕâÊÇifÓï¾ä");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ifï¿½ï¿½ï¿½");
 		}
 	}
 }
