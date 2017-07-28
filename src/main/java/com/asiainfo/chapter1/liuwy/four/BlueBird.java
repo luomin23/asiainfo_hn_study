@@ -5,12 +5,7 @@ package com.asiainfo.chapter1.liuwy.four;
  */
 public class BlueBird extends Bird{
     public BlueBird() {
-        super("蓝色", "蓝冰");
+        super("蓝冰", "蓝色");
 
-    }
-
-    @Override
-    public void fly() {
-        System.out.println("分三个飞");
     }
 }

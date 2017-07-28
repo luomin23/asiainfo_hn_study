@@ -8,9 +8,4 @@ public class YellowBird extends Bird{
         super("黄风", "黄色");
 
     }
-
-    @Override
-    public void fly() {
-        System.out.println("加速飞");
-    }
 }

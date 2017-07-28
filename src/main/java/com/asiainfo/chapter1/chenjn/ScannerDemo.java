@@ -1,4 +1,4 @@
-﻿package com.asiainfo.chapter1.chenjn;
+﻿﻿package com.asiainfo.chapter1.chenjn;
 
 import java.util.Scanner;
 
