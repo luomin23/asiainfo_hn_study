@@ -1,6 +1,6 @@
 package com.asiainfo.chapter1.wangjz.java.javaday1.javaday5;
 
-import org.junit.Test;
+
 
 /**
  * Created by wjz123456 on 2017/7/28.
