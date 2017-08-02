@@ -20,5 +20,10 @@ public class fanxing {
      Point<String> p = null;
         p = new Point<String>("JSH");
         System.out.println("内容："+p.getVar());
+
+
+
+
+
     }
 }
