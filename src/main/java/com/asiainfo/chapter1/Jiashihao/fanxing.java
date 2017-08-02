@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.Jiashihao;
+package src.main.java.com.asiainfo.chapter1.Jiashihao;
 
 /**
  * Created by lenovo on 2017/8/1.
