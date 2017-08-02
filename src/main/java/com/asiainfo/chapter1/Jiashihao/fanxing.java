@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.Jiashihao;
+package src.main.java.com.asiainfo.chapter1.Jiashihao;
 
 /**
  * Created by lenovo on 2017/8/1.
@@ -20,5 +20,10 @@ public class fanxing {
      Point<String> p = null;
         p = new Point<String>("JSH");
         System.out.println("内容："+p.getVar());
+
+
+
+
+
     }
 }
