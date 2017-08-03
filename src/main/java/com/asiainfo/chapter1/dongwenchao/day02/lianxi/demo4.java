@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by 超超 on 2017/7/28 0028.
  */
-public class deom4 {
+public class demo4 {
     public static void main(String[] agrs){
         Scanner a=new Scanner(System.in);
         System.out.println("将开始十次加法测试...");
