@@ -1,4 +1,4 @@
-package src.main.java.com.asiainfo.chapter1.Jiashihao;
+package com.asiainfo.chapter1.Jiashihao.JDKAPI;
 
 
 
