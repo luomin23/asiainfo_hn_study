@@ -12,7 +12,7 @@ public class dayinliu {
         ps = new PrintStream(new FileOutputStream(new File("d:"+ File.separator+"test.txt")));
         ps.print("hello ");
         ps.println("world!!!");
-        ps.print("1+1="+2);
+        ps.print("1+1=2"+2);
         ps.close();
     }
 }
