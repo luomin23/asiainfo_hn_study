@@ -7,7 +7,6 @@ import java.net.UnknownHostException;
 
 /**
   * 演示TCP传输：
-  * @author wl-pc
   * 1.tcp分为客户端和服务器端
   * 2.客服端对应的对象是socket
   *   服务器端对应的对象是serverSocket
@@ -18,7 +17,6 @@ import java.net.UnknownHostException;
   * 因为tcp是面向连接的。所以在建立socket服务
   * 时，就要有服务端存在，并且连接成功，形成
   * 通路后，再在该通道进行数据的传输。
-  * @author wl-pc
   * 步骤：
   *    1）创建socket服务，并指定要连接的主机和端口
   *    2）为了发送数据，应该获取socket流中的输出流

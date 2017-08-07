@@ -8,7 +8,6 @@ import java.net.UnknownHostException;
 
 /**
   * 演示tcp的传输的客户端和服务器端的互访。
-  * @author wl-pc
   * 需求是：客户端给服务端发送数据，服务器
   * 端收到数据后，给客户端反馈信息
   */

@@ -8,8 +8,6 @@ import java.net.Socket;
 
 /**
  *  演示tcp的传输的客户端和服务器端的互访。
- * @author Luoo2
- * @create 2017-08-07 0:06
  */
 
 public class TcpServer2 {
