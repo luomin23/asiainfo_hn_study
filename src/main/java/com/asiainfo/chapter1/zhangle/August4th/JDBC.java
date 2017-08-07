@@ -31,11 +31,13 @@ public class JDBC {
         //通过相对路径打开文件输入流
         InputStream is=JDBC.class.getResourceAsStream("jdbc.properties");
         //将文件当中的数据放到集合当中
-        try {
+       try {
             properties.load(is);
-        } catch (Exception e) {
-            System.out.println("null表示找不到上面的配置文件");
+        } catch (IOException e) {
+            System.out.println("null表示找不到上面的配置文件出错:");
+           // e.printStackTrace();
         }
+
 
     }
     /*连接数据库操作*/
