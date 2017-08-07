@@ -22,7 +22,11 @@
             <artifactId>guava</artifactId>
             <version>22.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.14.Final</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>asiainfo_hn_study</finalName>
