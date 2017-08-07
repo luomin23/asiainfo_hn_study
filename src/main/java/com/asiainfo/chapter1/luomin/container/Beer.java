@@ -1,5 +1,6 @@
 package com.asiainfo.chapter1.luomin.container;
 
+
 import com.google.common.base.Objects;
 
 import java.util.List;

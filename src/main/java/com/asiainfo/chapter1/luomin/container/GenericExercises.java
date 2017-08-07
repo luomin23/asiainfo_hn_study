@@ -7,7 +7,7 @@ import java.util.List;
  * @create 2017-08-01 11:01
  */
 
-public class GenericExercise {
+public class GenericExercises {
 
 
     //此行若把Number换为“？”编译通过
