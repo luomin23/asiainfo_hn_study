@@ -1,10 +1,5 @@
 package com.asiainfo.chapter1.wangjz.java.javaday1.javaday5;
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f514b002002e270b4ca9ac5c08d784c2281983d2
 /**
  * Created by wjz123456 on 2017/7/28.
  */
