@@ -17,7 +17,7 @@ public class PicServer {
         ServerSocket ss = new ServerSocket(4007);
         Socket s = ss.accept();
         InputStream in = s.getInputStream();
-        FileOutputStream fos = new FileOutputStream("F:\\Javajichu\\JavaLianXi\\src\\cn\\itheima\\day07\\server.jpg");
+        FileOutputStream fos = new FileOutputStream("C:\\idea_workspace\\asiainfo_hn_study\\src\\main\\java\\com\\asiainfo\\chapter1\\luomin\\net\\tcp\\server.jpg");
         byte[] buf = new byte[1024];
         int len = 0;
         while ((len = in.read(buf)) != -1) {

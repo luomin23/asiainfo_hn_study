@@ -16,7 +16,7 @@ public class TextServer {
                  String ip = s.getInetAddress().getHostAddress();
                  System.out.println(ip+".....conneted");
                  BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
-                 PrintWriter out = new PrintWriter(new FileWriter("F:\\Javajichu\\JavaLianXi\\src\\cn\\itheima\\day06\\server.txt"),true);
+                 PrintWriter out = new PrintWriter(new FileWriter("C:\\idea_workspace\\asiainfo_hn_study\\src\\main\\java\\com\\asiainfo\\chapter1\\luomin\\net\\tcp\\server.txt"),true);
                  String line = null;
                  while((line=bufIn.readLine())!=null){
                      out.println(line);
