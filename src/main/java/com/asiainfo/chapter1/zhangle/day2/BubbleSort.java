@@ -15,7 +15,6 @@ public class BubbleSort {
         int i=0;
         for(;i<arr.length;i++){
             arr[i]=r.nextInt(99);
-
         }
         System.out.println(Arrays.toString(arr));
         System.out.println("---------冒泡排序开始----------");
