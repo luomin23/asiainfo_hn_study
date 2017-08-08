@@ -24,7 +24,7 @@ import java.net.UnknownHostException;
 public class PicClient {
     public static void main(String[] args) throws UnknownHostException, IOException {
         Socket s = new Socket("127.0.0.1", 4007);
-        FileInputStream fis = new FileInputStream("F:\\Javajichu\\JavaLianXi\\src\\cn\\itheima\\day07\\1.jpg");
+        FileInputStream fis = new FileInputStream("C:\\idea_workspace\\asiainfo_hn_study\\src\\main\\java\\com\\asiainfo\\chapter1\\luomin\\net\\tcp\\1.jpg");
         OutputStream out = s.getOutputStream();
         byte[] buf = new byte[1024];
         int len = 0;
