@@ -21,7 +21,7 @@ public class AbstractTest {
        int age =9;
 
        public void idea(){
-           System.out.println("asd");
+           System.out.println("text");
        }
        public void think(){
            System.out.println("qwe"+super.age);//
