@@ -1,6 +1,5 @@
 package com.asiainfo.chapter1.luhui.luhui8;
 
-import static javafx.scene.input.KeyCode.T;
 
 /**
  * Created by 18237161432 on 2017/8/2.
