@@ -27,6 +27,7 @@ public class Statictest {
     }
     public void jump(){//重写非静态成员方法；
         System.out.println("在跳");
+
     }
 }
 class Demo_test{
