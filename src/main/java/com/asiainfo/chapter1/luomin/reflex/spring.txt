@@ -1,0 +1,2 @@
+class=com.asiainfo.chapter1.luomin.reflex.ServiceOne
+method=doService
