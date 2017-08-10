@@ -1,5 +1,6 @@
 package com.asiainfo.chapter1.liuhj.zuoye;
-import java.io.IOException
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import java.io.FileInputStream;
 
@@ -9,6 +10,6 @@ public class Demo   {
          String a;
 
 
-
-
+    public Demo() throws FileNotFoundException {
+    }
 }
