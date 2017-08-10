@@ -20,14 +20,7 @@ public class StreamDemo {
                 System.out.print(s);
             }
             in.close();
-           // File j=new File("D:\\ideaIU\\a.txt");
-           /* InputStreamReader aa=new InputStreamReader(new FileInputStream("D:\\ideaIU\\a.txt"),"UTF-8");
 
-            char w=(char) aa.read();
-            for(int b=0;w!=-1;b++){
-                System.out.print(w);
-                w=(char) aa.read();
-            }*/
 
         }
         catch (IOException e){

@@ -8,14 +8,14 @@ import java.util.Properties;
  */
 public class ProTest {
     public static void main(String[] args){
-//    Properties properties=new Properties();
-//        try {
-//            properties.load(ProTest.class.getResourceAsStream("my.properties"));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        String username=properties.getProperty("username");
-        String username=ProperUtil.getProperty("username");
+    Properties properties=new Properties();
+        try {
+            properties.load(ProTest.class.getResourceAsStream("my.properties"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //String username=properties.getProperty("username");
+        String username=properties.getProperty("username");
         System.out.println(username);
     }
 }
