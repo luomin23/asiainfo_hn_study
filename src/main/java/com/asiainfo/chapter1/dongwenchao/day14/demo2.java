@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.dongwenchao.zuoye1;
+package com.asiainfo.chapter1.dongwenchao.day14;
 import com.asiainfo.chapter1.dongwenchao.day10.JDBC;
 import java.sql.*;
 /**

@@ -1,7 +1,7 @@
 package com.asiainfo.chapter1.dongwenchao.zuoye1;
 
 import com.asiainfo.chapter1.dongwenchao.day10.JDBC;
-import com.asiainfo.chapter1.luhui.luhui2.LastArray;
+
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

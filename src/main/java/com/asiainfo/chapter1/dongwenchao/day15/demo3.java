@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.dongwenchao.zuoye;
+package com.asiainfo.chapter1.dongwenchao.day15;
 
 import java.sql.*;
 import java.util.Scanner;
@@ -10,7 +10,7 @@ public class demo3 {
     public void select() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/zuoye","root","root");
+            Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/day15","root","root");
             System.out.println("请输入插入的数据：");
             Scanner input = new Scanner(System.in);
             int id = input.nextInt();
