@@ -1,7 +1,6 @@
 package com.asiainfo.chapter1.luhui.luhui11;
 
 import java.io.*;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -13,7 +12,7 @@ public class serversockettest {
 
         try{
         Socket socket=new Socket("127.0.0.1",8888);//客户端;
-        File file=new File("a.txt");
+        File file=new File("D:\\ideaIU\\Git\\lh\\asiainfo_hn_study\\src\\main\\java\\com\\asiainfo\\chapter1\\luhui\\a.txt");
             BufferedReader buffer=new BufferedReader(new FileReader(file));
             PrintWriter out=new PrintWriter(socket.getOutputStream(),true);
             String line=null;

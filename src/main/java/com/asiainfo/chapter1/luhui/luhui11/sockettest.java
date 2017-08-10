@@ -27,15 +27,31 @@ public class sockettest {
              ServerSocket serversocket=new ServerSocket(8888);//服务器端；
              java.net.Socket socket=serversocket.accept();
             BufferedReader bufin=new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            BufferedWriter bufw=new BufferedWriter(new FileWriter("b.txt"));
+            BufferedWriter bufw=new BufferedWriter(new FileWriter("D:\\ideaIU\\Git\\lh\\asiainfo_hn_study\\src\\main\\java\\com\\asiainfo\\chapter1\\luhui\\b.txt"));
             String line1=null;
             while((line1=bufin.readLine())!=null){
+                System.out.println(line1);
+
                 bufw.write(line1,0,line1.length());
                 bufw.write("\n");
             }
+           /* bufw.flush();
+            String line="";
+          String s=null;
+            BufferedReader b=new BufferedReader(new FileReader("b.txt"));
+            while((line=b.readLine())!=null) {
+                System.out.println(line);
+                 s=line.substring(0,1);
+                // m=s;
+                System.out.println(s);
+            }
+            System.out.println(s);*/
+
+
             //定义字符串长度；
            /* String f=line1;
-            int start=0;
+            System.out.println(f);*/
+           /* int start=0;
             int end=2;
             char h[]=new char[end-start];
             f.getChars(start,end,h,0);
@@ -45,6 +61,7 @@ public class sockettest {
             PrintWriter out=new PrintWriter(socket.getOutputStream(),true);
             out.println("上传成功");
             System.out.println("服务器反馈客户端完了");
+           // b.close();
             bufw.close();
             socket.close();
             serversocket.close();
