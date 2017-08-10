@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+# add catlog
+.idea/
+target/
+src/main/webapp/WEB-INF/classes/
+# add file
+asiainfo_hn_study.iml
+
