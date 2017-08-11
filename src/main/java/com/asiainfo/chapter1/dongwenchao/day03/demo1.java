@@ -8,14 +8,14 @@ public class demo1 {
     private String sex;
     private int sid;*/
 
-    /*public demo1(String 姓名, String 性别, int 学号) {
+    /*public demo7(String 姓名, String 性别, int 学号) {
         name= 姓名;
         sex=性别;
         sid=学号;*/
 /*        System .out.println("姓名："+name +"\n" +"性别："+ sex+"\n" + "学号：" + sid );
     }
     public static void main (String[] args){
-        demo1 a= new demo1("董稳超" ,"男",6);
+        demo7 a= new demo7("董稳超" ,"男",6);
     }*/
     private int sid1;
     public demo1 (String name){

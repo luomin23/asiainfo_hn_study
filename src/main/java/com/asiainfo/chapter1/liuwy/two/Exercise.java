@@ -26,7 +26,7 @@ public class Exercise {
     public  static void counter(){
         float x,y,z;
         Scanner scanner=new Scanner(System.in);
-        System.out.println("请输入价（￥）");
+        System.out.println("请输入单价（￥）");
         x=scanner.nextFloat();
         System.out.println("请输入数量（￥）");
         y=scanner.nextFloat();

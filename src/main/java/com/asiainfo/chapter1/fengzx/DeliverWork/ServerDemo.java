@@ -9,7 +9,7 @@ import java.net.Socket;
  */
 public class ServerDemo {
     public static void main(String[] args) throws IOException {
-        ServerSocket ss = new ServerSocket(6533);
+        ServerSocket ss = new ServerSocket(3333);
 
         Socket s = ss.accept();
 
