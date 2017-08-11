@@ -7,10 +7,7 @@ import java.io.*;
  */
 public class BookRead {
 
-    /*读取json数据
-    * 出现问题：Book.json的数据运行几次后，输出为空了
-    * 出错在s=br.readLine() s值为空
-    * */
+    /*读取json数据 */
     public static void reaeJSON(){
         BufferedReader br=null;
         try {

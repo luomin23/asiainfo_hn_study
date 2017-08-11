@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.dongwenchao.zuoye1;
+package com.asiainfo.chapter1.dongwenchao.zuoye;
 
 import com.asiainfo.chapter1.dongwenchao.day10.JDBC;
 
@@ -12,8 +12,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by 超超 on 2017/8/10 0010.
@@ -23,8 +21,8 @@ public class demo4 {
     JDBC onecon=new JDBC();
     Connection con=null;//保存数据库连接的成员变量
     private PreparedStatement pstmt=null;
-    String a;
     public String chaxunone(String Id){
+        String a=null;
         con=onecon.getConn();
         ResultSet rs;
         try{
@@ -32,16 +30,14 @@ public class demo4 {
             pstmt.setString(1,Id);
             rs=pstmt.executeQuery();
             while (rs.next()){
-                String a=rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t";
-                System.out.println(a);
+                 a="编号："+rs.getString(1)+"\t"+"姓名："+rs.getString(2)+"\t"+"性别："+rs.getString(3)+"\t"+"电话："+rs.getString(4)+"\t";
             }
-
             pstmt.close();
             con.close();
         }catch (SQLException e){
             System.out.println("数据库异常" +e);
         }
-        return null;
+        return a;
     }
     public static void main(String[] args) {
         try {
@@ -58,25 +54,23 @@ public class demo4 {
                 String result = bufferedReader.readLine();
                 demo1 de=new demo1();
                 de.setId(result);
-                System.out.println("客户端说: " + result);
+                System.out.print("客户端说: " + result);
                 /** 发送服务端准备传输的 */
                 // 由Socket对象得到输出流，并构造PrintWriter对象
-
+                demo4 d=new demo4();
+                 String n=d.chaxunone(result);
                 PrintWriter printWriter =new PrintWriter(socket.getOutputStream());
-                printWriter.print("Id为"+result+"的信息:"+result);
+                printWriter.print("Id为"+result+"的信息:"+n);
                 printWriter.flush();
                 /** 关闭Socket*/
                 printWriter.close();
                 bufferedReader.close();
                 socket.close();
-                demo4 d=new demo4();
                 d.chaxunone(de.getId());
             }
         }catch (Exception e) {
             System.out.println("Exception:" + e);
         }finally{
-         //serverSocket.close();
-
         }
     }
 
