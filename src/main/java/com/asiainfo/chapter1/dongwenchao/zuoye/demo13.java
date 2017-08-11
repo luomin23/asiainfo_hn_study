@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.dongwenchao.zuoye1;
+package com.asiainfo.chapter1.dongwenchao.zuoye;
 import com.asiainfo.chapter1.dongwenchao.day10.JDBC;
 
 import java.io.*;
@@ -32,7 +32,7 @@ public class demo13 {
         //判断是否读到文件末尾
         while((len=in.read(buf)) != -1)
         {
-            com.asiainfo.chapter1.dongwenchao.zuoye1.demo1 demo= new com.asiainfo.chapter1.dongwenchao.zuoye1.demo1();
+            com.asiainfo.chapter1.dongwenchao.zuoye.demo1 demo= new com.asiainfo.chapter1.dongwenchao.zuoye.demo1();
             String temp =  new String(buf);
             String [] lenStr  =  temp.split(";");//split()方法根据给定正则表达式的匹配拆分此字符串。，遇到“；”就换个数组
             for(int i =0;i<lenStr.length-1;i++){
@@ -61,7 +61,7 @@ public class demo13 {
         fileLoaderSocket.close();
         fileSave.close();
 }
-    private static void saveStu(com.asiainfo.chapter1.dongwenchao.zuoye1.demo1 demo){
+    private static void saveStu(com.asiainfo.chapter1.dongwenchao.zuoye.demo1 demo){
         Connection conn = JDBC.getConn();
         String sql ="insert into students(Id,Name,Sex,Tel)values("+demo.getId()+",'"+demo.getName()+"','"+demo.getSex()+"','"+demo.getTel()+"')";
         PreparedStatement ps =null;
