@@ -54,4 +54,8 @@ public class PersonView {
 
         }
     }
+    public static void main(String[] args){
+        find();
+
+    }
 }
