@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.dongwenchao.zuoye1;
+package com.asiainfo.chapter1.dongwenchao.zuoye;
 
 import java.io.Serializable;
 
