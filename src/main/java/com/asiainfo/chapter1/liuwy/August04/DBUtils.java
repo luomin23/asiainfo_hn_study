@@ -33,4 +33,14 @@ public class DBUtils {
                 e.printStackTrace();
             }
     }
+    public static void main(String[] args) throws Exception{
+        String username="root";
+        String password="root";
+        String driver_class="com.mysql.jdbc.Driver";
+        String url = "jdbc:MySQL://localhost:3306/liu?useUnicode=true&characterEncoding=utf8";
+        Class.forName(driver_class);
+        Connection connection= DriverManager.getConnection(url,username,password);
+
+        System.out.println(connection);
+    }
 }

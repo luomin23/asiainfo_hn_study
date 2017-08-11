@@ -10,10 +10,10 @@ public class DBUtils {
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
         if (DBUtils.connection == null || connection.isClosed()) {
-            String username = "root";
-            String password = "root";
-            String driver_class = "com.mysql.jdbc.Driver";
-            String url = "jdbc:MySQL://localhost:3306/liu?useUnicode=true&characterEncoding=utf8";
+            String username =PropertiesUtil.getProperty("username");
+            String password =PropertiesUtil.getProperty("password");
+            String driver_class =PropertiesUtil.getProperty("driver");
+            String url =PropertiesUtil.getProperty("url");
             Class.forName(driver_class);
             connection = DriverManager.getConnection(url, username, password);
         }
@@ -46,4 +46,14 @@ public class DBUtils {
 
 
    // }
+   public static void main(String[] args) {
+       try {
+           DBUtils.getConnection();
+       } catch (ClassNotFoundException e) {
+           e.printStackTrace();
+       } catch (SQLException e) {
+           e.printStackTrace();
+       }
+       //System.out.println(connection);
+   }
 }
