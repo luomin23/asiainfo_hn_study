@@ -1,6 +1,6 @@
 package com.asiainfo.chapter1.dongwenchao.day14;
 
-import com.asiainfo.chapter1.dongwenchao.zuoye1.demo1;
+import com.asiainfo.chapter1.dongwenchao.zuoye.demo1;
 
 import java.lang.reflect.Field;
 

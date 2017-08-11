@@ -1,6 +1,7 @@
-package com.asiainfo.chapter1.dongwenchao.zuoye1;
+package com.asiainfo.chapter1.dongwenchao.zuoye;
 
 import java.io.BufferedReader;
+import java.io.FileWriter;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -20,6 +21,7 @@ public class demo3 {
             // 由Socket对象得到输出流，并构造PrintWriter对象
             PrintWriter printWriter =new PrintWriter(socket.getOutputStream(),true);
             // 将输入读入的字符串输出到Server
+            System.out.println("请输入你要查询的Id");
             BufferedReader sysBuff =new BufferedReader(new InputStreamReader(System.in));
             printWriter.println(sysBuff.readLine());
             // 刷新输出流，使Server马上收到该字符串
@@ -30,6 +32,9 @@ public class demo3 {
             // 输入读入一字符串
             String result = bufferedReader.readLine();
             System.out.println("服务器传回 : " + result);
+            FileWriter writer=new FileWriter("asd.txt");
+            writer.write(result);
+            writer.close();
             /** 关闭Socket*/
             printWriter.close();
             bufferedReader.close();
