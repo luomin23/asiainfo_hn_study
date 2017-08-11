@@ -1,6 +1,5 @@
-package com.asiainfo.chapter1.zhangle.August4th;
+package com.asiainfo.chapter1.zhangle.MailWorks;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
@@ -9,19 +8,16 @@ import java.util.Properties;
  * Created by del on 2017/8/4.
  */
 public class JDBC {
-    /*Oracle数据库的连接 创建一个Properties集合*/
     private static Properties properties=new Properties();
     static{
         //通过相对路径打开文件输入流
-        InputStream is=JDBC.class.getResourceAsStream("jdbc.properties");
         //将文件当中的数据放到集合当中
-       try {
+        try {
+            InputStream is= JDBC.class.getResourceAsStream("jdbc.properties");
             properties.load(is);
-        } catch (IOException e) {
-            System.out.println("null表示找不到上面的配置文件出错:");
-           // e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("找不到上面的配置文件出错:");
         }
-
 
     }
     /*连接数据库操作*/
@@ -31,9 +27,17 @@ public class JDBC {
         如果在属性列表中，默认属性列表及其默认值找到了键，然后检查递归。如果未找到该属性的方法返回null。
         */
         //加载驱动  其中(驱动名)
-        Class.forName(properties.getProperty("driver"));
-        //连接数据库  通过Properties得到url、username、password
-        Connection conn= DriverManager.getConnection(properties.getProperty("url"),properties.getProperty("username"),properties.getProperty("password"));
+        Connection conn = null;
+
+        try {
+            Class.forName(properties.getProperty("driver"));
+            //连接数据库  通过Properties得到url、username、password
+            conn = DriverManager.getConnection(properties.getProperty("url"), properties.getProperty("username"), properties.getProperty("password"));
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
         return  conn;
     }
     /*  关闭数据库连接--查询数据库  */
@@ -78,7 +82,5 @@ public class JDBC {
         }
     }
 
-
-
-
 }
+
