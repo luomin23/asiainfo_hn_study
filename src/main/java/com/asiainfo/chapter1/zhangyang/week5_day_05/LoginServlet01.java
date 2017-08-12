@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.zhangyang.week5_day_04;
+package com.asiainfo.chapter1.zhangyang.week5_day_05;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,10 +9,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Created by 11 on 2017/8/10.
+ * Created by 11 on 2017/8/11.
  */
-@WebServlet(name="LoginServlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "LoginServlet01")
+public class LoginServlet01 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("gbk");//处理请求与响应中文字体乱码，只适用于post提交
         response.setCharacterEncoding("gbk");//设置编码一定放在程序的最前面
@@ -24,10 +24,11 @@ public class LoginServlet extends HttpServlet {
             out.close();
             return;
         }
-        if(username.equals("张")&&password.equals("12345")){
-            out.println(username+"login success!");
+        if(username.equals("zhang")&&password.equals("12345")){
+            request.setAttribute("username",username);
+            request.getRequestDispatcher("/chapter1/zhangyang/week5_day_05/success.jsp").forward(request,response);
         }else{
-            out.println(username+"login error!");
+            request.getRequestDispatcher("/chapter1/zhangyang/week5_day_05/error.jsp").forward(request,response);
         }
         out.close();
     }

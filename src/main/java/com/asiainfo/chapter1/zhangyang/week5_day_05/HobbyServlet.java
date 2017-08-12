@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.zhangyang.week5_day_04;
+package com.asiainfo.chapter1.zhangyang.week5_day_05;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,21 +9,23 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Created by 11 on 2017/8/10.
+ * Created by 11 on 2017/8/11.
  */
-@WebServlet( name = "TestServlet")
-public class TestServlet extends HttpServlet {
+@WebServlet(name = "Servlet")
+public class HobbyServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String high = request.getParameter("high");
-        int num = Integer.parseInt(request.getParameter("num"));
+        request.setCharacterEncoding("gbk");
+        response.setCharacterEncoding("gbk");
+        String [] hobbies = request.getParameterValues("hobbies");
         PrintWriter out = response.getWriter();
-        out.println("high=" +high);
-        out.println("num="+num);
-        out.println("num is"+(num%2==0?"Even":"Odd"));
+        out.println("hobbies=");
+        for(String hobby:hobbies){
+            out.println(hobby+",");
+        }
         out.close();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
+
     }
 }
