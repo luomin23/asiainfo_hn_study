@@ -1,11 +1,12 @@
-package com.asiainfo.chapter1.liuwy.August07;
+package com.asiainfo.chapter1.liuwy.August11;
+
+import org.apache.commons.io.IOUtils;
 
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.util.Scanner;
 import java.util.concurrent.Callable;
-import org.apache.commons.io.IOUtils;
+
 /**
  * Created by LENOVO on 2017/8/7.
  */

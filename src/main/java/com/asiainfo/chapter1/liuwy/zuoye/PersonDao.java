@@ -1,9 +1,4 @@
-package com.asiainfo.chapter1.liuwy.August08;
-
-
-
-import com.asiainfo.chapter1.liuwy.zuoye.DBUtils;
-import com.asiainfo.chapter1.liuwy.zuoye.Person;
+package com.asiainfo.chapter1.liuwy.zuoye;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -11,13 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
 /**
- * Created by LENOVO on 2017/8/8.
+ * Created by LENOVO on 2017/8/13.
  */
-public class
-PersonDao {
-
+public class PersonDao {
 
     //保存
     public void save(Person person) throws ClassNotFoundException,SQLException,IOException {
@@ -32,7 +24,7 @@ PersonDao {
         pstat.setInt(5,person.getBirth());
         pstat.executeUpdate();
     }
-//查找
+    //查找
     public static Person findByPhone(int phonenumber) throws ClassNotFoundException, SQLException{
         String sql="select * from person where phonenumber=?";
         Connection conn= DBUtils.getConnection();
@@ -51,6 +43,6 @@ PersonDao {
         }
         else {
             return null;}
-   }
+    }
 
 }

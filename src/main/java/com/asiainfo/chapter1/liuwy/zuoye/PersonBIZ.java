@@ -1,17 +1,16 @@
-package com.asiainfo.chapter1.liuwy.August08;
+package com.asiainfo.chapter1.liuwy.zuoye;
 
-import com.asiainfo.chapter1.liuwy.zuoye.DBUtils;
-import com.asiainfo.chapter1.liuwy.zuoye.Person;
+
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 /**
- * Created by LENOVO on 2017/8/8.
+ * Created by LENOVO on 2017/8/13.
  */
 public class PersonBIZ {
     public boolean save(Person person){
-        PersonDao personDao=new PersonDao();
+        com.asiainfo.chapter1.liuwy.August08.PersonDao personDao=new com.asiainfo.chapter1.liuwy.August08.PersonDao();
         try {
             try {
                 personDao.save(person);
@@ -31,7 +30,7 @@ public class PersonBIZ {
     }
 
     public Person findByPhone(int phonenumber){
-        PersonDao personDao=new PersonDao();
+        com.asiainfo.chapter1.liuwy.August08.PersonDao personDao=new com.asiainfo.chapter1.liuwy.August08.PersonDao();
         try {
             return personDao.findByPhone(phonenumber);
         } catch (ClassNotFoundException e) {
