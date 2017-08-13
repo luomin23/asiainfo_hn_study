@@ -37,10 +37,9 @@ public class demo13 {
             String [] lenStr  =  temp.split(";");//split()方法根据给定正则表达式的匹配拆分此字符串。，遇到“；”就换个数组
             for(int i =0;i<lenStr.length-1;i++){
                 String [] sonStr = lenStr[i].split("\\|");//遇到“|”就换个数组
-                Pattern p = Pattern.compile("\\s*|\t|\r|\n");//Pattern类是任意格式都能兼容
-                Matcher m= p.matcher(sonStr[0]);//创建匹配给定输入与此模式的匹配器。
-                demo.setId(m.replaceAll(""));
-                /*demo.setName(sonStr[0]);*/
+                /*Pattern p = Pattern.compile("\\s*|\t|\r|\n");//Pattern类是任意格式都能兼容
+                Matcher m= p.matcher(sonStr[0]);//创建匹配给定输入与此模式的匹配器。*/
+                demo.setId(sonStr[0]);
                 demo.setName(sonStr[1]);
                 demo.setSex(sonStr[2]);
                 demo.setTel(sonStr[3]);
