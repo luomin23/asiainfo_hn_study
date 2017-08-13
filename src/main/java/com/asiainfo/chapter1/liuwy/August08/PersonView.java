@@ -1,5 +1,7 @@
 package com.asiainfo.chapter1.liuwy.August08;
 
+import com.asiainfo.chapter1.liuwy.zuoye.Person;
+
 import java.util.Scanner;
 
 /**

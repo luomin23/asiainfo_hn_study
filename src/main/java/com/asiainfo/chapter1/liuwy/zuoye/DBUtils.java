@@ -1,4 +1,6 @@
-package com.asiainfo.chapter1.liuwy.August08;
+package com.asiainfo.chapter1.liuwy.zuoye;
+
+import com.asiainfo.chapter1.liuwy.August08.PropertiesUtil;
 
 import java.sql.*;
 
@@ -10,7 +12,7 @@ public class DBUtils {
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
         if (DBUtils.connection == null || connection.isClosed()) {
-            String username =PropertiesUtil.getProperty("username");
+            String username = PropertiesUtil.getProperty("username");
             String password =PropertiesUtil.getProperty("password");
             String driver_class =PropertiesUtil.getProperty("driver");
             String url =PropertiesUtil.getProperty("url");
