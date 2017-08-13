@@ -24,7 +24,7 @@ public class demo14 {
         //告诉服务端，文件已传输完毕
         fileLoaderSocket.shutdownOutput();//没有（不让）其他的用这个套接字的输出流
         //获取从服务端反馈的信息
-        BufferedReader in = new BufferedReader(new InputStreamReader(fileLoaderSocket.getInputStream()));
+        BufferedReader in = new BufferedReader(new InputStreamReader(fileLoaderSocket.getInputStream()));//从字符输入流中读取文本
         String serverBack = in.readLine();
         System.out.println(serverBack);
         //资源关闭
