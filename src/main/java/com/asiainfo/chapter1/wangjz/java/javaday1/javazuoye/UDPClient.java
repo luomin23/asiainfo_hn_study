@@ -26,7 +26,7 @@ public class UDPClient extends Readtxl{
             e.printStackTrace();
         }
         try {
-            Document document = db.parse("txl");
+            Document document = db.parse("C:\\Program Files\\Git\\test\\asiainfo_hn_study\\src\\main\\java\\com\\asiainfo\\chapter1\\wangjz\\java\\javaday1\\javazuoye\\txl");
             NodeList list = document.getElementsByTagName("boot");
             for (int i = 0; i < list.getLength(); i++) {
                 Node book = list.item(i);

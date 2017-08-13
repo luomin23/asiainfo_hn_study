@@ -8,8 +8,8 @@ import java.net.Socket;
  */
 public class Client {
     public static void main(String[] args) throws IOException {
-        Socket client = new Socket("localhost",9999);
         //控制台输入流
+        Socket client = new Socket("localhost",9999);
         BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
         //输出流
         DataOutputStream dos = new DataOutputStream(client.getOutputStream());

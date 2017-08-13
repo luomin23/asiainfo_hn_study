@@ -9,23 +9,7 @@ import java.util.Properties;
  * Created by del on 2017/8/4.
  */
 public class JDBC {
-    /*Oracle数据库的连接*/
-   /* 方法一*/
-   /*
-    public static final String DBDRIVER="oracle.jdbc.OracleDriver";
-    public static final String DBURL="jdbc:oracle:thin:@localhost:1521:xe";
-    public static final String DBUSER="hr";
-    public static final String DBPASS="hr";
-    public static void main(String[] args) throws ClassNotFoundException, SQLException {
-
-        Connection conn=null;
-        Class.forName(DBDRIVER);  //出现异常
-        conn= DriverManager.getConnection(DBURL,DBUSER,DBPASS);
-        System.out.println(conn);
-        conn.close();
-
-    }*/
-    /*方法二： 创建一个Properties集合*/
+    /*Oracle数据库的连接 创建一个Properties集合*/
     private static Properties properties=new Properties();
     static{
         //通过相对路径打开文件输入流
@@ -93,10 +77,6 @@ public class JDBC {
             }
         }
     }
-
-    /*public static void main(String[] args) {
-        System.out.println(is);
-    }*/
 
 
 

@@ -1,12 +1,8 @@
 package com.asiainfo.chapter1.dongwenchao.day14;
 
-import com.alibaba.fastjson.util.IOUtils;
-import com.asiainfo.chapter1.dongwenchao.zuoye1.demo1;
-import com.sun.org.apache.xerces.internal.impl.io.UTF8Reader;
+import com.asiainfo.chapter1.dongwenchao.zuoye.demo1;
 
 import java.io.*;
-
-import static com.alibaba.fastjson.util.IOUtils.UTF8;
 
 /**
  * Created by 超超 on 2017/8/8 0008.
