@@ -10,8 +10,8 @@ import java.io.InputStreamReader;
  */
 public class ReadTxt {
     public  void readTxtFile(){
-        System.out.println("***********");
-        System.out.println("文件的内容是：");
+//        System.out.println("***********");
+//        System.out.println("文件的内容是：");
         try {
             File file=new File("G:\\Javaio\\10\\java002.txt");
             if(file.isFile() && file.exists()){ //判断文件是否存在
@@ -20,7 +20,7 @@ public class ReadTxt {
                 BufferedReader bufferedReader = new BufferedReader(read);
                 String lineTxt = null;
                 while((lineTxt = bufferedReader.readLine()) != null){
-                    System.out.println(lineTxt);
+//                    System.out.println(lineTxt);
                 }
                 read.close();
             }else{

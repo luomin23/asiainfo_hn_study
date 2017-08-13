@@ -27,8 +27,9 @@ public class Server {
             bw.newLine();
             bw.flush();
         }
+        sqlUtil.insert();
         //返回信息到客户端那边
-        out.println("上传成功");
+        out.println("上传成功！如果你想查询联系人信息，请输入电话号：");
         //关闭资源
         bw.close();
         s.close();
