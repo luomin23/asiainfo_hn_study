@@ -17,7 +17,6 @@ import java.net.InetAddress;
 public class UDPClient extends Readtxl{
     public static void main(String[] args) {
         String ss = null;
-        byte o[]=new byte[5];
         DocumentBuilderFactory d = DocumentBuilderFactory.newInstance();
         DocumentBuilder db = null;
         try {
@@ -50,9 +49,9 @@ public class UDPClient extends Readtxl{
             byte[]outBuffer=ss.getBytes();
             DatagramPacket outPacket=new DatagramPacket(outBuffer,outBuffer.length,sAddr,7601);
 
-            dSocket.send(outPacket);
+            dSocket.send(outPacket);//
             inPacket=new DatagramPacket(inBuffer,inBuffer.length);
-            dSocket.receive(inPacket);
+            dSocket.receive(inPacket);//
             String s=new String(inPacket.getData(),0,inPacket.getLength());
             System.out.println("接收到服务器的信息"+s);
 

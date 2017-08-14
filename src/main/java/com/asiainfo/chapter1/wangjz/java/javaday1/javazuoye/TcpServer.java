@@ -41,13 +41,11 @@ public class TcpServer {
             System.out.println("你要查询"+aa+"的信息...");
             select(aa);
             FileWriter f=new FileWriter("C:\\Program Files\\Git\\test\\asiainfo_hn_study\\src\\main\\java\\com\\asiainfo\\chapter1\\wangjz\\java\\javaday1\\javazuoye\\outtxl.txt");
-            try{
+
 
                 f.write(a);
                 f.flush();
-            }catch (Exception e){
 
-            }
             try {
                 output.writeUTF(a);
             }catch (Exception e){
