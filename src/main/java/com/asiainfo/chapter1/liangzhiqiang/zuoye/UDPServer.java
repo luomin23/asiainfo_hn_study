@@ -21,7 +21,7 @@ public class UDPServer {
             byte[] inBuffer = new byte[100];
             String s;
             try {
-                //创建DatagramPacket对象，端口号是7600
+                //创建DatagramPacket对象，端口号是8000
                 dSocket = new DatagramSocket(8000);
                 //接收客户端的数据
                 while (true) {
