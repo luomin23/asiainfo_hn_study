@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 /**
  * Created by 11 on 2017/8/10.
  */
-@WebServlet( "/TestServlet")
+@WebServlet( name = "TestServlet")
 public class TestServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String high = request.getParameter("high");
