@@ -2,6 +2,9 @@ package com.asiainfo.chapter1.liuwy.August08;
 
 
 
+import com.asiainfo.chapter1.liuwy.zuoye.DBUtils;
+import com.asiainfo.chapter1.liuwy.zuoye.Person;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,14 +15,15 @@ import java.sql.SQLException;
 /**
  * Created by LENOVO on 2017/8/8.
  */
-public class PersonDao {
+public class
+PersonDao {
 
 
     //保存
     public void save(Person person) throws ClassNotFoundException,SQLException,IOException {
         String sql="insert into person(name,phonenumber,address,emil,birth) values(?,?,?,?,?)";
         //String sql="insert into dept(deptno,name,loc) values(?,?,?)";
-        Connection conn=DBUtils.getConnection();
+        Connection conn= DBUtils.getConnection();
         PreparedStatement pstat=conn.prepareStatement(sql);
         pstat.setString(1,person.getName());
         pstat.setInt(2,person.getPhonenumber());
@@ -29,7 +33,7 @@ public class PersonDao {
         pstat.executeUpdate();
     }
 //查找
-    public Person findByPhone(int phonenumber) throws ClassNotFoundException, SQLException{
+    public static Person findByPhone(int phonenumber) throws ClassNotFoundException, SQLException{
         String sql="select * from person where phonenumber=?";
         Connection conn= DBUtils.getConnection();
         PreparedStatement pstat=conn.prepareStatement(sql);
@@ -44,8 +48,9 @@ public class PersonDao {
             person1.setEmil(rs.getString("emil"));
             person1.setBirth(rs.getInt("birth"));
             return person1;
-        }else {
+        }
+        else {
             return null;}
-    }
+   }
 
 }
