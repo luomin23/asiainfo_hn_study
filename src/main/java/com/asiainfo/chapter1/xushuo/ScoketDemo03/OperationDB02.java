@@ -13,7 +13,7 @@ public class OperationDB02 {
             con = Jdbc03.getConnection();
             System.out.println("数据库已连接");
         }
-
+        System.out.println("请输入将要查询的手机号：");
         String sql = "insert into communication(numberz,namez,site,Emil,birthday)VALUE (?,?,?,?,?)";
 
         PreparedStatement pstmt = con.prepareStatement(sql);
@@ -50,8 +50,8 @@ public class OperationDB02 {
             infoBean.setSite(result.getString(3));
             infoBean.setEmil(result.getNString(4));
             infoBean.setBitrthday(result.getNString(5));
-            System.out.println(infoBean.getNumberz()+infoBean.getNamez()
-                    +infoBean.getSite()+infoBean.getEmil()+infoBean.getBitrthday()+"");
+            System.out.println(infoBean.getNumberz()+","+infoBean.getNamez()+","
+                    +infoBean.getSite()+","+infoBean.getEmil()+","+infoBean.getBitrthday()+"");
         }
 
 

@@ -16,7 +16,7 @@ public class MyClient03 {
     public MyClient03(){
         try {
             socket=new Socket("127.0.0.1",5000);
-            //建立端口
+            //建立连接
             din=new DataInputStream(socket.getInputStream());
             //把读取到的东西，放到Socket进行传输
             dout=new DataOutputStream(new FileOutputStream("C:\\Users\\root\\Desktop\\tt.txt"));

@@ -19,14 +19,16 @@ public class MyServer03 {
     private DataInputStream din;
     private DataOutputStream dout;
 
+
     public MyServer03() {
+        System.out.println("服务器端已启动");
         try {
             server = new ServerSocket(5000);
             //声明一个socket端口号
             socket = server.accept();
-            //接受并返回Client端
+            //当发现客户端有socket试图链接，会accept该socket请求，并建立一个socket与之通信
             din = new DataInputStream(new FileInputStream("C:\\Users\\root\\Desktop\\JAVA.txt"));
-            //读取该文件夹
+            //阻塞式 读取该文件夹
             dout = new DataOutputStream(socket.getOutputStream());
             //并输出
             int i = 0;
@@ -38,6 +40,7 @@ public class MyServer03 {
             }
 
             dout.flush();
+            //要使用flush，这样服务端才能收到客户端发送的数据，否则可能会引起两边无限的互相等待
             dout.close();
             din.close();
             socket.close();
@@ -109,6 +112,6 @@ public class MyServer03 {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        System.out.println("谢谢使用~");
     }
 }
