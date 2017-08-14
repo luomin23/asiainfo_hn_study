@@ -10,7 +10,7 @@ package com.asiainfo.chapter1.liangzhiqiang.zuoye;
     import java.net.DatagramPacket;
     import java.net.DatagramSocket;
     import java.net.InetAddress;
-public class UDPClient {
+public class ChatClient {
      static String tempString;
     static  String ss;
     public static void main(String args[]){
@@ -44,7 +44,7 @@ e.printStackTrace();
                 sAddr=InetAddress.getByName(args[0]);
             byte[]outBuffer=ss.getBytes();
             /*创建一个对象用于发送客户端的数据包，定义包的大小，以及要发送到的地址和端口号，即目的地以及端口号。*/
-            DatagramPacket outPacket=new DatagramPacket(outBuffer,outBuffer.length,sAddr,7600);
+            DatagramPacket outPacket=new DatagramPacket(outBuffer,outBuffer.length,sAddr,8000);
             dSocket.send(outPacket);//发送数据报
             //接收服务器发送的数据
             inPacket=new DatagramPacket(inBuffer,inBuffer.length);

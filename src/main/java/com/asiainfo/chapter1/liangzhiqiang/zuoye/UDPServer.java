@@ -22,7 +22,7 @@ public class UDPServer {
             String s;
             try {
                 //创建DatagramPacket对象，端口号是7600
-                dSocket = new DatagramSocket(7600);
+                dSocket = new DatagramSocket(8000);
                 //接收客户端的数据
                 while (true) {
                 /*创建一个对象用于接收客户端（接收端）发送的数据，

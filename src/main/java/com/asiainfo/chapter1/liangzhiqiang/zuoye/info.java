@@ -1,19 +1,19 @@
-package com.asiainfo.chapter1.liangzhiqiang.day12;
+package com.asiainfo.chapter1.liangzhiqiang.zuoye;
 
 /**
  * Created by 君不悔 on 2017/8/12.
  */
-public class zhu extends ChatServer {
+public class info extends UDPServer {
     private String Age;
     private String Name;
     private  String Email;
     private String Add;
     private String Tel;
 
-    public zhu()
+    public info()
     {
     }
-    public zhu(String Age,String Name,String Add,String Tel,String Email  )
+    public info(String Age, String Name, String Add, String Tel, String Email  )
     {
         this.Age=Age;
         this.Name = Name;
