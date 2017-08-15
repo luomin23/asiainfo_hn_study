@@ -24,6 +24,7 @@ public class Jdbc03 {
             con = DriverManager.getConnection(url, user, password);
         } catch (SQLException ex) {
             Logger.getLogger(Jdbc03.class.getName()).log(Level.SEVERE,null, ex);
+            //打印调试信息
         }
         return con;
 

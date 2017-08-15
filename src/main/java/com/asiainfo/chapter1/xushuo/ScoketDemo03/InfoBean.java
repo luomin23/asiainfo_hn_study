@@ -1,7 +1,5 @@
 package com.asiainfo.chapter1.xushuo.ScoketDemo03;
 
-import java.util.Date;
-
 /**
  * Created by root on 2017/8/12.
  */
