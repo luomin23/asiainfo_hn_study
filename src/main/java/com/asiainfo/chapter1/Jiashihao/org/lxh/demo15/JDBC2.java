@@ -34,7 +34,7 @@ public class JDBC2 {
             InputStream input = rs.getAsciiStream(2);
             FileOutputStream out = null;
             out = new FileOutputStream(
-                    new File("d:" + File.separator+ "shujuku.txt"));
+                    new File("d:" + File.separator+ "test.txt"));
             int temp = 0;
             while((temp=input.read())!=-1){
                 out.write(temp);
