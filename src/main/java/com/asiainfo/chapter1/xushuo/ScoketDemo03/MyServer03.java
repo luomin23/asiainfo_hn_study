@@ -1,7 +1,5 @@
 package com.asiainfo.chapter1.xushuo.ScoketDemo03;
 
-import com.asiainfo.chapter1.xushuo.ScoketDemo03.OperationDB02;
-
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;

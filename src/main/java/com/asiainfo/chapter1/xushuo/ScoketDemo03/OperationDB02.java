@@ -2,7 +2,10 @@ package com.asiainfo.chapter1.xushuo.ScoketDemo03;
 
 
 import java.sql.*;
-//增加和查询的方法
+/**
+ * Created by root on 2017/8/12.
+ *查询的方法
+ */
 
 public class OperationDB02 {
     PreparedStatement pstmt=null;
