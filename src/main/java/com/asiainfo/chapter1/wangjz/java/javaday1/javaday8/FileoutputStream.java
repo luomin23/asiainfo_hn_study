@@ -19,8 +19,8 @@ public class FileoutputStream {
         }
         try {
             FileOutputStream f = new FileOutputStream("wjz.txt");
-           // f.write(b);
-          //  f.write(b,0,46);
+            f.write(b);
+//            f.write(b,0,46);
             f.flush();
             f.close();
         }  catch (IOException e) {

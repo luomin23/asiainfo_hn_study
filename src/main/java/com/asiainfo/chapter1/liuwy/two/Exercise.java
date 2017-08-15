@@ -12,13 +12,13 @@ import java.util.Random;
 
 public class Exercise {
     public static  void  main(String[] args){
-        //counter();
+        counter();
         //grade();
        //game();
         //suiji();
         //cheng();
         //zu();
-        rzu();
+        //rzu();
         //maopao();
 
     }

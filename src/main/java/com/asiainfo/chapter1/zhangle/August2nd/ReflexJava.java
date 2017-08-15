@@ -47,10 +47,11 @@ public class ReflexJava {
 
     public static void main(String[] args) throws Exception {
         /*方法一：
-        无法获取类 以及 需要抛出ClassNotFoundException异常
+        获取类 以及 需要抛出ClassNotFoundException异常
+        注意使用forName获取类时需要使用全路径
         */
         try{
-            Class c= Class.forName("SetJava");
+            Class c= Class.forName("com.asiainfo.chapter1.zhangle.August2nd.SetJava");
             System.out.println(c);
         }catch (ClassNotFoundException e1){
             System.out.println("无法获取类");

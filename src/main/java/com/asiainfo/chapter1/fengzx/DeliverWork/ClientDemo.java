@@ -8,9 +8,9 @@ import java.net.Socket;
  */
 public class ClientDemo {
     public static void main(String[] args) throws IOException {
-        Socket s = new Socket("192.168.199.160",6533);
+        Socket s = new Socket("localhost",3333);
 
-        BufferedReader br = new BufferedReader(new FileReader("G:\\通讯录.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("G:\\Git\\fzxworkspace\\asiainfo_hn_study\\src\\main\\java\\com\\asiainfo\\chapter1\\fengzx\\DeliverWork\\director.txt"));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
 
         String line = null;
