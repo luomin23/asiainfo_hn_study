@@ -2,7 +2,7 @@ package com.asiainfo.chapter1.dongwenchao.web;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +15,7 @@ import java.util.Date;
 /**
  * Created by 超超 on 2017/8/15 0015.
  */
-@WebServlet(name = "AddMessageServlet")
+
 public class AddMessageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String author=new String(request.getParameter("aut").getBytes("ISO-8859-1"),"UTF-8");
