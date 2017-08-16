@@ -13,9 +13,13 @@
         </init-param>
         <servlet-name>Servlet4PostValue</servlet-name>
         <servlet-class>com.asiainfo.chapter1.luomin.servlet.Servlet4PostValue</servlet-class>
+
+        <servlet-name>TestServlet01</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.hanjunwen.JavaWebDemo01.TestServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
+
         <servlet-name>Servlet4PostValue</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
