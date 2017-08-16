@@ -43,6 +43,7 @@ public class Client {
                 if (str.equals("0")) {
                     System.out.println("写入失败！");
                     System.out.println("查询不到结果，请检查输入的电话号码是否有误！");
+                    break;
                 } else {
                     System.out.println(str);
                     File f = new File("D:\\work\\Git\\gitworkspace\\asiainfo_hn_study\\src\\main\\java\\com\\asiainfo\\chapter1\\zhangyang\\week5_day_06\\c.txt");

@@ -32,7 +32,7 @@ public class sqlUtil {
                     String sql = "insert into list values('" + str[0] + "','" + str[1] + "','" + str[2] + "','" + str[3] + "','" + str[4] + "','" + str[5] + "')";
                     try {
 
-                        st = (Statement) conn.createStatement();
+                        st = (Statement) conn.createStatement();//创建一个 Statement 对象来将SQL 语句发送到数据库
                         st.executeUpdate(sql);
                     } catch (SQLException e) {
                         e.printStackTrace();
@@ -53,7 +53,7 @@ public class sqlUtil {
         st.setString(1,number);
         ResultSet rs=st.executeQuery();
         if (rs.next()){
-            rs.previous();
+            rs.previous();//回滚上一条
             while (rs.next()) {
 //            Person p =new Person();
 //            p.setId(rs.getInt("id"));
@@ -63,7 +63,7 @@ public class sqlUtil {
                 s = rs.getInt("id") + "," + rs.getString("name") + "," + rs.getString("number") + "," + rs.getString("addr") + "," + rs.getString("email") + "," + rs.getString("birt");
             }
         }else{
-            s="0";
+            s="0";//先s定义为0
         }
         return  s;
     }

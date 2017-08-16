@@ -11,7 +11,7 @@ import org.junit.After;
 * @since 07/26/2017 
 * @version 1.0 
 */ 
-public class HelloWorldTest { 
+public class HelloWorldTest {
 
 @Before
 public void before() throws Exception { 
