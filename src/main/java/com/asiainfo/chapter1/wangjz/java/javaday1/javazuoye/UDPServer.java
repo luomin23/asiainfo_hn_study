@@ -95,7 +95,7 @@ public class UDPServer {
         byte[] outBuffer;
             dSocket = new DatagramSocket(7601);
             inPacket = new DatagramPacket(inBuffer, inBuffer.length);
-            dSocket.receive(inPacket);
+            dSocket.receive(inPacket);//
             cAddr = inPacket.getAddress();
             cport = inPacket.getPort();
             String s = new String(inPacket.getData(), 0, inPacket.getLength());
@@ -116,7 +116,7 @@ public class UDPServer {
             Date d1 = new Date();
             outBuffer = d1.toString().getBytes();
             outPacket = new DatagramPacket(outBuffer, outBuffer.length, cAddr, cport);
-            dSocket.send(outPacket);
+            dSocket.send(outPacket);//
         try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","123456");
