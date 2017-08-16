@@ -32,7 +32,7 @@ public class demo3 {
             // 输入读入一字符串
             String result = bufferedReader.readLine();
             System.out.println("服务器传回 : " + result);
-            FileWriter writer=new FileWriter("asd.txt");
+            FileWriter writer=new FileWriter("asd.txt");//写入字符文件的
             writer.write(result);
             writer.close();
             /** 关闭Socket*/
