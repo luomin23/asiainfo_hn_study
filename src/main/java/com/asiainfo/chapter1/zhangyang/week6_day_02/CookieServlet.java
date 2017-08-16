@@ -1,7 +1,6 @@
 package com.asiainfo.chapter1.zhangyang.week6_day_02;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +13,7 @@ import java.util.LinkedList;
 /**
  * Created by 11 on 2017/8/15.
  */
-@WebServlet(name = "Servlet3")
+
 public class CookieServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();

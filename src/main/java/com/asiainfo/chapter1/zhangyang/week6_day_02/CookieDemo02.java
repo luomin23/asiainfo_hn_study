@@ -1,7 +1,7 @@
 package com.asiainfo.chapter1.zhangyang.week6_day_02;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * Created by 11 on 2017/8/15.
  */
-@WebServlet(name = "Servlet4")
+
 public class CookieDemo02 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("UTF-8");
