@@ -11,7 +11,7 @@ import java.sql.SQLException;
  */
 
 public class DBHelper {
-    public static final String url = "jdbc:mysql://127.0.0.1/test";
+    public static final String url = "jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8&useSSL=true";
     public static final String driver = "com.mysql.jdbc.Driver";
     public static final String username = "root";
     public static final String password = "12345";

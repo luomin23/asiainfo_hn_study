@@ -96,6 +96,7 @@ public class JdbcConnectionByMysql {
     public static void main(String args[]) {
         JdbcConnectionByMysql.getAll();
         JdbcConnectionByMysql.insert(new Student("Achilles", "Male", "14"));
+        JdbcConnectionByMysql.insert(new Student("张三", "Male", "14"));
         JdbcConnectionByMysql.getAll();
         JdbcConnectionByMysql.update(new Student("Bean", "", "7"));
 //        JdbcConnectionByMysql.delete("Achilles");
