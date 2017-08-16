@@ -1,8 +1,5 @@
 package com.asiainfo.chapter1.dongwenchao.zuoye;
-
 import com.asiainfo.chapter1.dongwenchao.day10.JDBC;
-
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
