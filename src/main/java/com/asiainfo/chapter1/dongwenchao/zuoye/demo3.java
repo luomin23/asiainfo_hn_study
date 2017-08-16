@@ -19,11 +19,11 @@ public class demo3 {
             socket.setSoTimeout(60000);
             /** 发送客户端准备传输的信息 */
             // 由Socket对象得到输出流，并构造PrintWriter对象
-            PrintWriter printWriter =new PrintWriter(socket.getOutputStream(),true);
+            PrintWriter printWriter =new PrintWriter(socket.getOutputStream(),true);//PrintWriter 向文本输出流打印对象的格式化表示形式。
             // 将输入读入的字符串输出到Server
             System.out.println("请输入你要查询的Id");
-            BufferedReader sysBuff =new BufferedReader(new InputStreamReader(System.in));
-            printWriter.println(sysBuff.readLine());
+            BufferedReader sysBuff =new BufferedReader(new InputStreamReader(System.in));//BufferedReader一个读的流
+            printWriter.println(sysBuff.readLine());//读取要传给服务器的值，传出。
             // 刷新输出流，使Server马上收到该字符串
             printWriter.flush();
             /** 用于获取服务端传输来的信息 */
@@ -32,7 +32,7 @@ public class demo3 {
             // 输入读入一字符串
             String result = bufferedReader.readLine();
             System.out.println("服务器传回 : " + result);
-            FileWriter writer=new FileWriter("asd.txt");
+            FileWriter writer=new FileWriter("asd.txt");//写入字符文件的
             writer.write(result);
             writer.close();
             /** 关闭Socket*/

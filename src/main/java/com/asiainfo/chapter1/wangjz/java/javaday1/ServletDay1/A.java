@@ -12,13 +12,13 @@ public class A extends HttpServlet {
     protected  void processRequest(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
         response.setContentType("TEXT/html;charset=utf-8");
         PrintWriter out=response.getWriter();
-        out.println("<html>");
-        out.println("<head>");
-        out.println("</head>");
-        out.println("<head>");
+//        out.println("<html>");
+//        out.println("<head>");
+//        out.println("</head>");
+//        out.println("<head>");
         out.println("wjzdgdg");
-        out.println("</body>");
-        out.println("</html>");
+//        out.println("</body>");
+//        out.println("</html>");
         out.close();
 
     }

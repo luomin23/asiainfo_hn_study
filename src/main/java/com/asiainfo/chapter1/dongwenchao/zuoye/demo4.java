@@ -1,8 +1,5 @@
 package com.asiainfo.chapter1.dongwenchao.zuoye;
-
 import com.asiainfo.chapter1.dongwenchao.day10.JDBC;
-
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -49,9 +46,9 @@ public class demo4 {
                 Socket socket = serverSocket.accept();
                 /** 获取客户端传来的信息 */
                 // 由Socket对象得到输入流，并构造相应的BufferedReader对象
-                BufferedReader bufferedReader =new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                BufferedReader bufferedReader =new BufferedReader(new InputStreamReader(socket.getInputStream()));//读客户端的东西
                 // 获取从客户端读入的字符串
-                String result = bufferedReader.readLine();
+                String result = bufferedReader.readLine();//给result
                 demo1 de=new demo1();
                 de.setId(result);
                 System.out.print("客户端说: " + result);

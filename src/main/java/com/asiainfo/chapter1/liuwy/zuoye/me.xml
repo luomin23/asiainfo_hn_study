@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<person> 
+  <personal> 
+    <id id="001">1</id>  
+    <name>刘文燕</name>  
+    <phonenumber>111</phonenumber>  
+    <address>郑州</address>  
+    <emil>5760@qq.com</emil>  
+    <birth>1995</birth> 
+  </personal>  
+  <personal>
+    <id>1</id>
+    <name>张三</name>
+    <phonenumber>1222222</phonenumber>
+    <address>河北</address>
+    <emil>1222@qq.com</emil>
+    <birth>1992</birth>
+  </personal>
+</person>
