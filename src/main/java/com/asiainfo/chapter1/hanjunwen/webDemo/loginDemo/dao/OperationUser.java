@@ -6,4 +6,5 @@ import com.asiainfo.chapter1.hanjunwen.webDemo.loginDemo.entity.User;
 //操作用户
 public interface OperationUser {
    public User selectUserByUsername(String name);
+   public Boolean checkUser(User user);
 }

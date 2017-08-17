@@ -10,6 +10,9 @@
 <html>
 <head>
     <title>用户登录</title>
+    <style>
+        span{color:red;}
+    </style>
 </head>
 <body>
 
@@ -17,7 +20,11 @@
         用户名：<input type="text" name="username" required><br>
         密  码：<input type="password" name="pwd" required><br>
         <input type="submit" name="login" value="登录">
-        <input type="reset" value="重置">
+        <input type="reset" value="重置"><br>
+        <%String result=(String) request.getAttribute("loginResult");%>
+        <%if(result!=null&&!result.equals("")){%>
+            <span><%=result%></span>
+        <%}%>
     </form>
 </body>
 </html>

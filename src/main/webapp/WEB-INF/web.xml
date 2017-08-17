@@ -240,6 +240,25 @@
         <servlet-name>toLoginDemo</servlet-name>
         <url-pattern>/toLoginDemo.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>toUserIndex</servlet-name>
+        <jsp-file>/chapter1/hanjunwen/loginDemo/userIndex.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>toUserIndex</servlet-name>
+        <url-pattern>toUserIndex.do</url-pattern>
+    </servlet-mapping>
+
+    <!--<filter>-->
+        //拦截器练习
+        <!--<filter-name>filterAllRequest</filter-name>-->
+        <!--<filter-class>com.asiainfo.chapter1.hanjunwen.util.FilterUtil.FilterDemo</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>filterAllRequest</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
 
     <servlet>
         <servlet-name>GetServlet</servlet-name>

@@ -21,9 +21,15 @@ public class OperationUserImpl implements OperationUser {
             PreparedStatement pst = conn.prepareStatement(sql);
             pst.setString(1,name);
             ResultSet rs=pst.executeQuery();
-            while(rs.next()){
-                u.setUserName(rs.getString("username"));
-                u.setPwd(rs.getString("pwd"));
+            if(rs.next()) {
+                rs.previous();
+                while (rs.next()) {
+                    u.setUserName(rs.getString("username"));
+                    u.setPwd(rs.getString("pwd"));
+                }
+            }else {
+                u.setUserName("");
+                u.setPwd("");
             }
             pst.close();
             rs.close();
@@ -32,5 +38,20 @@ public class OperationUserImpl implements OperationUser {
             e.printStackTrace();
         }
         return u;
+    }
+
+    @Override
+    public Boolean checkUser(User user) {
+        User u=selectUserByUsername(user.getUserName());
+        if(u==null&&u.equals("")){
+//           result="用户不存在！";
+            return false;
+        }
+        if(u.getPwd().equals(user.getPwd())){
+            return true;
+        }else {
+//           result="密码错误！！";
+            return false;
+        }
     }
 }
