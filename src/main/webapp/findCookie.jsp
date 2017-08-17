@@ -14,9 +14,9 @@
             String name = c.getName();
             String value = c.getValue();
             out.print("========================");
-            out.println("<h3>Name:" +
-                    name + "  Value:" + value
-                    + "</h3>");
+            out.println("<h3>Name:" + name + "</h3>");
+            out.println("<h3>Value:" + value + " </h3 >");
+            out.print("========================");
         }
     } else {
         out.print("没有Cookie");
