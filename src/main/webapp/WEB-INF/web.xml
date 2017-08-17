@@ -246,7 +246,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>toUserIndex</servlet-name>
-        <url-pattern>toUserIndex.do</url-pattern>
+        <url-pattern>/toUserIndex.do</url-pattern>
     </servlet-mapping>
 
     <!--<filter>-->
