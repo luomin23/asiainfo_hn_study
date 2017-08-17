@@ -16,8 +16,8 @@ public class TestServlet extends HttpServlet {
         String pwd=request.getParameter("pwd");
         PrintWriter pw=response.getWriter();
         if(name.equals("zl") && pwd.equals("1234")){
-            //response.sendRedirect("/chapter1/zhangle/JSPWords/Forward.jsp"); //两次请求
-            request.getRequestDispatcher("/chapter1/zhangle/JSPWords/Forward.jsp").forward(request,response);
+            //response.sendRedirect("/chapter1/zhangle/August11th/Forward.jsp"); //两次请求
+            request.getRequestDispatcher("/chapter1/zhangle/August11th/Forward.jsp").forward(request,response);
 
         }else {
             System.out.println("错误");
