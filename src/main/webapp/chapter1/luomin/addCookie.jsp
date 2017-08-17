@@ -2,7 +2,7 @@
 <%
     Cookie c1 = new Cookie("uname", "Kitty");
     //设置路径为应用的根路径
-    c1.setPath("/day06");
+    c1.setPath("chapter1/luomin");
     response.addCookie(c1);
 
 %>

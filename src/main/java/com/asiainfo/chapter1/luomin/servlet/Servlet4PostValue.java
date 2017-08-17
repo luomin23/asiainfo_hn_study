@@ -48,15 +48,12 @@ public class Servlet4PostValue extends HttpServlet {
         PrintWriter out = response.getWriter();
         String title = "使用 GET 方法读取表单数据";
         System.out.println("============================");
-        System.out.println("============================");
-        System.out.println("============================");
-        System.out.println("============================");
+        System.out.println("****************************");
 
 
         // 处理中文
-        String name = "";
-        if (!Strings.isNullOrEmpty(request.getParameter("id"))) {
-            name = request.getParameter("id");
+        String name = request.getParameter("id");
+        if (!Strings.isNullOrEmpty(name)) {
             name = new String(name.getBytes("iso-8859-1"), "utf-8");
         }
 
