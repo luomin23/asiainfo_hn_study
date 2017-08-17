@@ -230,7 +230,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>GetServlet</servlet-name>
-        <url-pattern>/get</url-pattern>
+        <url-pattern>/zl/get</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -239,7 +239,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>testServlet</servlet-name>
-        <url-pattern>/Ztest</url-pattern>
+        <url-pattern>/zl/test</url-pattern>
     </servlet-mapping>
     <!--Cookie-->
     <servlet>
@@ -248,7 +248,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>cookie</servlet-name>
-        <url-pattern>/cookieServlet</url-pattern>
+        <url-pattern>/zl/cookieServlet</url-pattern>
     </servlet-mapping>
     <!--filter 编码格式过滤  /*过滤所有的servlet-->
     <filter>
@@ -257,6 +257,6 @@
     </filter>
     <filter-mapping>
         <filter-name>encodingfilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/zl/*</url-pattern>
     </filter-mapping>
 </web-app>
