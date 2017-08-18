@@ -1,12 +1,14 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
+<?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
-  <display-name>Archetype Created Web Application</display-name>
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>TestServlet01</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.hanjunwen.JavaWebDemo01.TestServlet</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_04.HelloServlet</servlet-class>
@@ -64,22 +66,18 @@
         <servlet-name>Cookie</servlet-name>
         <url-pattern>/Cookie</url-pattern>
     </servlet-mapping>
-    <!--
-    <filter>
-        <filter-name>TestFilter</filter-name>
-        <filter-class>com.asiainfo.chapter1.zhangyang.week6_day_03.Filter.TestFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>TestFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>-->
+
     <servlet>
-        <servlet-name>UserServlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.zhangyang.week6_day_03.Service.UserServlet</servlet-class>
+        <init-param>
+            <param-name>company</param-name>
+            <param-value>asiainfo</param-value>
+        </init-param>
+        <servlet-name>Servlet4PostValue</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.luomin.servlet.Servlet4PostValue</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>UserServlet</servlet-name>
-        <url-pattern>/UserServlet</url-pattern>
+        <servlet-name>Servlet4PostValue</servlet-name>
+        <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 
 <servlet>
@@ -225,48 +223,12 @@
 
 
     <servlet>
-        <servlet-name>HandleUserLogin</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.hanjunwen.webDemo.loginDemo.controller.HandleUserLogin</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>HandleUserLogin</servlet-name>
-        <url-pattern>/login.do</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>toLoginDemo</servlet-name>
-        <jsp-file>/chapter1/hanjunwen/loginDemo/login.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>toLoginDemo</servlet-name>
-        <url-pattern>/toLoginDemo.do</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>toUserIndex</servlet-name>
-        <jsp-file>/chapter1/hanjunwen/loginDemo/userIndex.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>toUserIndex</servlet-name>
-        <url-pattern>/toUserIndex.do</url-pattern>
-    </servlet-mapping>
-
-    <!--<filter>-->
-        //拦截器练习
-        <!--<filter-name>filterAllRequest</filter-name>-->
-        <!--<filter-class>com.asiainfo.chapter1.hanjunwen.util.FilterUtil.FilterDemo</filter-class>-->
-    <!--</filter>-->
-    <!--<filter-mapping>-->
-        <!--<filter-name>filterAllRequest</filter-name>-->
-        <!--<url-pattern>/*</url-pattern>-->
-    <!--</filter-mapping>-->
-
-
-    <servlet>
         <servlet-name>GetServlet</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangle.ServletDay2.GetServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetServlet</servlet-name>
-        <url-pattern>/zl/get</url-pattern>
+        <url-pattern>/get</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -275,7 +237,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>testServlet</servlet-name>
-        <url-pattern>/zl/test</url-pattern>
+        <url-pattern>/Ztest</url-pattern>
     </servlet-mapping>
     <!--Cookie-->
     <servlet>
@@ -284,7 +246,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>cookie</servlet-name>
-        <url-pattern>/zl/cookieServlet</url-pattern>
+        <url-pattern>/cookieServlet</url-pattern>
     </servlet-mapping>
     <!--filter 编码格式过滤  /*过滤所有的servlet-->
     <filter>
@@ -293,6 +255,6 @@
     </filter>
     <filter-mapping>
         <filter-name>encodingfilter</filter-name>
-        <url-pattern>/zl/*</url-pattern>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
 </web-app>
