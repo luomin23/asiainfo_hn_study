@@ -1,9 +1,10 @@
-package com.asiainfo.chapter1.hanjunwen.servlet.servletDemo;
+package com.asiainfo.chapter1.hanjunwen.webDemo.servletDemo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
 //设置访问路径
+
 public class TestServlet01 extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
 

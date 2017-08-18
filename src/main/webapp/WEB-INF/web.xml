@@ -1,12 +1,14 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
+<?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
-  <display-name>Archetype Created Web Application</display-name>
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>TestServlet01</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.hanjunwen.JavaWebDemo01.TestServlet</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_04.HelloServlet</servlet-class>
@@ -64,22 +66,18 @@
         <servlet-name>Cookie</servlet-name>
         <url-pattern>/Cookie</url-pattern>
     </servlet-mapping>
-    <!--
-    <filter>
-        <filter-name>TestFilter</filter-name>
-        <filter-class>com.asiainfo.chapter1.zhangyang.week6_day_03.Filter.TestFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>TestFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>-->
+
     <servlet>
-        <servlet-name>UserServlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.zhangyang.week6_day_03.Service.UserServlet</servlet-class>
+        <init-param>
+            <param-name>company</param-name>
+            <param-value>asiainfo</param-value>
+        </init-param>
+        <servlet-name>Servlet4PostValue</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.luomin.servlet.Servlet4PostValue</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>UserServlet</servlet-name>
-        <url-pattern>/UserServlet</url-pattern>
+        <servlet-name>Servlet4PostValue</servlet-name>
+        <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 
 <servlet>
