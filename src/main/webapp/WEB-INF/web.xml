@@ -3,21 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
-    <display-name>Archetype Created Web Application</display-name>
+  <display-name>Archetype Created Web Application</display-name>
 
-    <servlet>
-        <servlet-name>TestServlet01</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.hanjunwen.JavaWebDemo01.TestServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_04.HelloServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/HelloServlet</url-pattern>
-    </servlet-mapping>
     <servlet>
         <servlet-name>TestServlet</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_04.TestServlet</servlet-class>
@@ -65,19 +52,6 @@
     <servlet-mapping>
         <servlet-name>Cookie</servlet-name>
         <url-pattern>/Cookie</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <init-param>
-            <param-name>company</param-name>
-            <param-value>asiainfo</param-value>
-        </init-param>
-        <servlet-name>Servlet4PostValue</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.luomin.servlet.Servlet4PostValue</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Servlet4PostValue</servlet-name>
-        <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 
 <servlet>
@@ -218,6 +192,17 @@
         <servlet-name>TextServlet</servlet-name>
         <url-pattern>/TextServlet</url-pattern>
     </servlet-mapping>
+   <!-- <filter>
+        <filter-name>LogFilter</filter-name>
+        <filter-class>com.asiainfo.chapter1.luhui.luhui14.LogFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LogFilter</filter-name>
+        <url-pattern>/messageBoard</url-pattern>
+    </filter-mapping>
+-->
+
+
 
     <servlet>
         <servlet-name>GetServlet</servlet-name>
@@ -225,7 +210,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>GetServlet</servlet-name>
-        <url-pattern>/zl/get</url-pattern>
+        <url-pattern>/get</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -234,7 +219,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>testServlet</servlet-name>
-        <url-pattern>/zl/test</url-pattern>
+        <url-pattern>/Ztest</url-pattern>
     </servlet-mapping>
     <!--Cookie-->
     <servlet>
@@ -243,19 +228,62 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>cookie</servlet-name>
-        <url-pattern>/zl/cookieServlet</url-pattern>
+        <url-pattern>/cookieServlet</url-pattern>
     </servlet-mapping>
     <!--filter 编码格式过滤  /*过滤所有的servlet-->
-    <filter>
+   <!-- <filter>
         <filter-name>encodingfilter</filter-name>
         <filter-class>com.asiainfo.chapter1.zhangle.ServletDay2.FilterServlet</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>encodingfilter</filter-name>
-        <url-pattern>/zl/*</url-pattern>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>-->
+    <servlet>
+        <servlet-name>ServletAddMeassage</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.luhui.luhui13.ServletAddMeassage</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>registerServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.luhui.luhui15.registerServlet</servlet-class>
+    </servlet>
+
+
+
+
+    <filter>
+        <filter-name>filterServlet</filter-name>
+        <filter-class>com.asiainfo.chapter1.luhui.luhui15.filterServlet</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filterServlet</filter-name>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
-    <!--配置监听器 -->
-    <listener>
-        <listener-class>com.asiainfo.chapter1.zhangle.ServletDay2.ListenerWorks</listener-class>
-    </listener>
+
+
+
+    <servlet-mapping>
+        <servlet-name>registerServlet</servlet-name>
+        <url-pattern>/registerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAddMeassage</servlet-name>
+        <url-pattern>/ServletAddMeassage</url-pattern>
+    </servlet-mapping>
+<filter>
+    <filter-name>filterLogin</filter-name>
+    <filter-class>com.asiainfo.chapter1.luhui.luhui15.filterLogin</filter-class>
+    <init-param>
+        <param-name>param1</param-name>
+        <param-value>value在这里</param-value>
+    </init-param>
+</filter>
+<filter-mapping>
+    <filter-name>filterLogin</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher> <!-- 没有配置dispatcher就是默认request方式的 -->
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>ERROR</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+</filter-mapping>
 </web-app>

@@ -10,7 +10,7 @@
 <head>
     <title>留言板页面</title>
 </head>
-<body background="">
+<body background="08.jpg">
 <form action="../../../ServletAddMeassage" method="post">
     留言者：<input type="text" name="author" size="30">
     <br>
@@ -20,7 +20,8 @@
     <p>
     <input type="submit" value="提交">
     <input type="reset" value="清除">
-    <a href="">查看留言</a>
+    <a href="showMessage.jsp">查看留言</a>
+
 </form>
 </body>
 </html>
