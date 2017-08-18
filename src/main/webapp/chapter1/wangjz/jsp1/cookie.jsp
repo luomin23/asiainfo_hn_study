@@ -21,7 +21,7 @@
         for(Cookie cookie:cookies){
             out.println(cookie.getName()+" "+cookie.getValue());
             out.println("path"+cookie.getPath());
-            cookie.setMaxAge(30);//set cookie 的最大时效，若为0，则立即删除cookie，
+           // cookie.setMaxAge(30);//set cookie 的最大时效，若为0，则立即删除cookie，
                                                          // 若为-1表示不存储该cookie
         }
     }
