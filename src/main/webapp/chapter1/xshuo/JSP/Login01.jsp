@@ -11,11 +11,10 @@
     <title>登录页面</title>
 </head>
 <body>
-<form action ="LoginServletDemo01" method="post">
-    useName:<input type="text" name="uname" /> <br/>
-    password:<input type="password" name="upwd" /><br/>
-    <input type="submit" value="Login"/>
-    <input type="reset" value="Reset" />
+<form action ="/chaster1/xshuo/JSP/scusser.jsp" method="post">
+    useName:<input type="text" name="username" /> <br/>
+    password:<input type="password" name="password" /><br/>
+    <input type="submit" value="登陆"/>
 </form>
 </body>
 </html>

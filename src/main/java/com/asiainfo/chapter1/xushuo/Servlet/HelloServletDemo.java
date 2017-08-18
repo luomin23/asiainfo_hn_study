@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.xushuo;
+package com.asiainfo.chapter1.xushuo.Servlet;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
