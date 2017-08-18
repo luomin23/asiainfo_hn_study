@@ -1,6 +1,7 @@
 package com.asiainfo.chapter1.luomin.servlet;
 
-import javax.servlet.ServletConfig;
+import com.google.common.base.Strings;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,12 +45,17 @@ public class Servlet4PostValue extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 设置响应内容类型
         response.setContentType("text/html;charset=UTF-8");
-
         PrintWriter out = response.getWriter();
         String title = "使用 GET 方法读取表单数据";
+        System.out.println("============================");
+        System.out.println("****************************");
+
+
         // 处理中文
         String name = request.getParameter("id");
-        name = new String(name.getBytes("iso-8859-1"),"utf-8");
+        if (!Strings.isNullOrEmpty(name)) {
+            name = new String(name.getBytes("iso-8859-1"), "utf-8");
+        }
 
         String url = "你好";
 
