@@ -1,11 +1,10 @@
-package com.asiainfo.chapter1.hanjunwen.servlet.servletDemo;
+package com.asiainfo.chapter1.hanjunwen.webDemo.servletDemo;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-
 
 public class TestBodyServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {

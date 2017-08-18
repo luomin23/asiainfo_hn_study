@@ -3,17 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
-  <display-name>Archetype Created Web Application</display-name>
-    <servlet>
-        <init-param>
-            <param-name>company</param-name>
-            <param-value>asiainfo</param-value>
-        </init-param>
-        <servlet-name>Servlet4PostValue</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.luomin.servlet.Servlet4PostValue</servlet-class>
+    <display-name>Archetype Created Web Application</display-name>
 
+    <servlet>
         <servlet-name>TestServlet01</servlet-name>
         <servlet-class>com.asiainfo.chapter1.hanjunwen.JavaWebDemo01.TestServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_04.HelloServlet</servlet-class>
     </servlet>
@@ -69,7 +65,17 @@
     <servlet-mapping>
         <servlet-name>Cookie</servlet-name>
         <url-pattern>/Cookie</url-pattern>
+    </servlet-mapping>
 
+    <servlet>
+        <init-param>
+            <param-name>company</param-name>
+            <param-value>asiainfo</param-value>
+        </init-param>
+        <servlet-name>Servlet4PostValue</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.luomin.servlet.Servlet4PostValue</servlet-class>
+    </servlet>
+    <servlet-mapping>
         <servlet-name>Servlet4PostValue</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
@@ -213,16 +219,13 @@
         <url-pattern>/TextServlet</url-pattern>
     </servlet-mapping>
 
-
-
-
     <servlet>
         <servlet-name>GetServlet</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangle.ServletDay2.GetServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetServlet</servlet-name>
-        <url-pattern>/get</url-pattern>
+        <url-pattern>/zl/get</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -231,7 +234,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>testServlet</servlet-name>
-        <url-pattern>/Ztest</url-pattern>
+        <url-pattern>/zl/test</url-pattern>
     </servlet-mapping>
     <!--Cookie-->
     <servlet>
@@ -240,7 +243,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>cookie</servlet-name>
-        <url-pattern>/cookieServlet</url-pattern>
+        <url-pattern>/zl/cookieServlet</url-pattern>
     </servlet-mapping>
     <!--filter 编码格式过滤  /*过滤所有的servlet-->
     <filter>
@@ -249,6 +252,10 @@
     </filter>
     <filter-mapping>
         <filter-name>encodingfilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/zl/*</url-pattern>
     </filter-mapping>
+    <!--配置监听器 -->
+    <listener>
+        <listener-class>com.asiainfo.chapter1.zhangle.ServletDay2.ListenerWorks</listener-class>
+    </listener>
 </web-app>
