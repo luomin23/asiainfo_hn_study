@@ -66,7 +66,22 @@
         <servlet-name>Cookie</servlet-name>
         <url-pattern>/Cookie</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week6_day_05.service.RegsiterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginCheckServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week6_day_05.service.LoginCheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginCheckServlet</servlet-name>
+        <url-pattern>/LoginCheckServlet</url-pattern>
+    </servlet-mapping>
     <servlet>
         <init-param>
             <param-name>company</param-name>
