@@ -326,3 +326,27 @@
     </listener>
 </web-app>
 
+<<<<<<< Updated upstream
+=======
+<filter>
+    <filter-name>LogFilter</filter-name>
+    <filter-class>com.asiainfo.chapter1.Jiashihao.Servlet817.LogFilter</filter-class>
+    <init-param>
+        <param-name>Site</param-name>
+        <param-value>baidu</param-value>
+    </init-param>
+</filter>
+<filter-mapping>
+    <filter-name>LogFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+<servlet>
+    <servlet-name>DisplayHeader</servlet-name>
+    <servlet-class>com.asiainfo.chapter1.Jiashihao.Servlet817.DisplayHeader</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>DisplayHeader</servlet-name>
+    <url-pattern>DisplayHeader</url-pattern>
+</servlet-mapping>
+</web-app>
+>>>>>>> Stashed changes
