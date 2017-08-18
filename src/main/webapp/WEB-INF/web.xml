@@ -94,14 +94,7 @@
 
 
 
-    <servlet>
-    <servlet-name>Demo1Servlet</servlet-name>
-    <servlet-class>com.asiainfo.chapter1.liuhj.August14.Demo1Servlet</servlet-class>
-</servlet>
-    <servlet-mapping>
-        <servlet-name>Demo1Servlet</servlet-name>
-        <url-pattern>/Demo1Servlet</url-pattern>
-    </servlet-mapping>
+
 
     <servlet>
         <servlet-name>Demo2Servlet</servlet-name>
