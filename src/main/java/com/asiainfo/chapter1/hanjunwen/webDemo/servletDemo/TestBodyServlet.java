@@ -1,5 +1,4 @@
 package com.asiainfo.chapter1.hanjunwen.webDemo.servletDemo;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

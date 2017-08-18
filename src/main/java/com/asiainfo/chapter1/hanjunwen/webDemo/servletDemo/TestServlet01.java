@@ -1,6 +1,5 @@
 package com.asiainfo.chapter1.hanjunwen.webDemo.servletDemo;
 
-import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
