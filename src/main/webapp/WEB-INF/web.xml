@@ -5,10 +5,10 @@
          version="2.5">
     <display-name>Archetype Created Web Application</display-name>
 
-    <servlet>
-        <servlet-name>TestServlet01</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.hanjunwen.JavaWebDemo01.TestServlet</servlet-class>
-    </servlet>
+    <!--<servlet>-->
+        <!--<servlet-name>TestServlet01</servlet-name>-->
+        <!--<servlet-class>com.asiainfo.chapter1.hanjunwen.JavaWebDemo01.TestServlet</servlet-class>-->
+    <!--</servlet>-->
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_04.HelloServlet</servlet-class>
@@ -67,18 +67,18 @@
         <url-pattern>/Cookie</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <init-param>
-            <param-name>company</param-name>
-            <param-value>asiainfo</param-value>
-        </init-param>
-        <servlet-name>Servlet4PostValue</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.luomin.servlet.Servlet4PostValue</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Servlet4PostValue</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<init-param>-->
+            <!--<param-name>company</param-name>-->
+            <!--<param-value>asiainfo</param-value>-->
+        <!--</init-param>-->
+        <!--<servlet-name>Servlet4PostValue</servlet-name>-->
+        <!--<servlet-class>com.asiainfo.chapter1.luomin.servlet.Servlet4PostValue</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>Servlet4PostValue</servlet-name>-->
+        <!--<url-pattern>/hello</url-pattern>-->
+    <!--</servlet-mapping>-->
 
 <servlet>
     <servlet-name>SconfigServlet</servlet-name>
@@ -257,4 +257,23 @@
         <filter-name>encodingfilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+
+    <servlet>
+        <servlet-name>registservlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuwy.August18.RegistServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registservlet</servlet-name>
+        <url-pattern>/registservlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>selectservlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuwy.August18.SelectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>selectservlet</servlet-name>
+        <url-pattern>/selectservlet.do</url-pattern>
+    </servlet-mapping>
+
 </web-app>
