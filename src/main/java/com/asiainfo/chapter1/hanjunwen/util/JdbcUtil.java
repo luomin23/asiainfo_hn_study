@@ -28,10 +28,10 @@ public class JdbcUtil {
     }
 
     //关闭数据库连接
-    public static void closeConnection(Connection conn){
-        if(conn!=null){
-            try {
-                conn.close();
+            public static void closeConnection(Connection conn){
+                if(conn!=null){
+                    try {
+                        conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
