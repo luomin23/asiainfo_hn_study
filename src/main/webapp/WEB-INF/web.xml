@@ -4,24 +4,8 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
   <display-name>Archetype Created Web Application</display-name>
-    <servlet>
-        <init-param>
-            <param-name>company</param-name>
-            <param-value>asiainfo</param-value>
-        </init-param>
-        <servlet-name>Servlet4PostValue</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.luomin.servlet.Servlet4PostValue</servlet-class>
 
-        <servlet-name>TestServlet01</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.hanjunwen.JavaWebDemo01.TestServlet</servlet-class>
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_04.HelloServlet</servlet-class>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/HelloServlet</url-pattern>
-    </servlet-mapping>
     <servlet>
         <servlet-name>TestServlet</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_04.TestServlet</servlet-class>
@@ -62,17 +46,8 @@
         <servlet-name>CookieDemo01</servlet-name>
         <url-pattern>/CookieDemo01</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>Cookie</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.zhangyang.week6_day_02.CookieDemo02</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Cookie</servlet-name>
-        <url-pattern>/Cookie</url-pattern>
 
-        <servlet-name>Servlet4PostValue</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
+
 
 <servlet>
     <servlet-name>SconfigServlet</servlet-name>
@@ -238,6 +213,24 @@
         <servlet-name>cookie</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangle.ServletDay2.CookieServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BuyServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August17.Session.BuyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PayServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August17.Session.PayServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BuyServlet</servlet-name>
+        <url-pattern>/BuyServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PayServlet</servlet-name>
+        <url-pattern>/PayServlet</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>cookie</servlet-name>
         <url-pattern>/cookieServlet</url-pattern>
