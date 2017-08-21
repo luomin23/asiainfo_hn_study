@@ -138,6 +138,32 @@
         <url-pattern>/deleteBlogById.do</url-pattern>
     </servlet-mapping>
 
+    <!--用户更改博客内容-->
+    <servlet>
+        <servlet-name>getBlogById</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.hanjunwen.webDemo.workDemo.controller.blog.GetBlogByIdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getBlogById</servlet-name>
+        <url-pattern>/getBlogById.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>toUpdateBlogJSP</servlet-name>
+        <jsp-file>/chapter1/hanjunwen/workDemo/updateBlog.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>toUpdateBlogJSP</servlet-name>
+        <url-pattern>/toUpdateBlogJSP.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>updateBlogByUser</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.hanjunwen.webDemo.workDemo.controller.blog.UpdateBlogServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateBlogByUser</servlet-name>
+        <url-pattern>/updateBlogByUser.do</url-pattern>
+    </servlet-mapping>
+
     <!--<filter>-->
     <!--<filter-name>filterAllRequest</filter-name>-->
     <!--<filter-class>util.FilterUtil.FilterDemo</filter-class>-->

@@ -35,7 +35,7 @@
                 <td><%=blog.getTitle()%></td>
                 <td><%=blog.getAuthor()%></td>
                 <td><%=blog.getArticle()%></td>
-                <td><a href="/deleteBlogById.do?id=<%=blog.getId()%>">删除</a></td>
+                <td><a href="/getBlogById.do?id=<%=blog.getId()%>">修改</a><a href="/deleteBlogById.do?id=<%=blog.getId()%>">删除</a></td>
             </tr>
         <% }
         %>
