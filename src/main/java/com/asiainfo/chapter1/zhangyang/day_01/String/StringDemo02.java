@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.zhangyang.String;
+package com.asiainfo.chapter1.zhangyang.day_01.String;
 //String ���һ�������������� length() ������
 //�������ַ�������������ַ�����
 public class StringDemo02 {

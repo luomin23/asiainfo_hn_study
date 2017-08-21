@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.zhangyang.String;
+package com.asiainfo.chapter1.zhangyang.day_01.String;
 
 public class StringBufferDemo01 {
 	public static void main(String[] args) {

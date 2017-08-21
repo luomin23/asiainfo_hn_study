@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.zhangyang.recursion;
+package com.asiainfo.chapter1.zhangyang.day_01.recursion;
 //ʹ�õݹ��㷨��ӡ�žų˷���
 public class TestDemo02 {
 	public static void main(String[] args) {

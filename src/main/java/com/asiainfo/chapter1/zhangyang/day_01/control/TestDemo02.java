@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.zhangyang.control;
+package com.asiainfo.chapter1.zhangyang.day_01.control;
 
 public class TestDemo02 {
 	public static void main(String[] args) {

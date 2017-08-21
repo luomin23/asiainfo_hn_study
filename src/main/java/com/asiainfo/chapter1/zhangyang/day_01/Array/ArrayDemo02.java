@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.zhangyang.Array;
+package com.asiainfo.chapter1.zhangyang.day_01.Array;
 
 import java.util.Arrays;
 
