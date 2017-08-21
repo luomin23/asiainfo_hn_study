@@ -29,9 +29,9 @@ public class LoginServlet extends HttpServlet  {
                 response.addCookie(cookie);
             }
             request.setAttribute("username",username);
-            request.getRequestDispatcher("chapter1/dongwenchao/web/day1/main126.jsp").forward(request,response);
+            request.getRequestDispatcher("/chapter1/dongwenchao/web/day1/main126.jsp").forward(request,response);
         }else{
-            request.getRequestDispatcher("chapter1/dongwenchao/web/day1/failure.jsp").forward(request,response);
+            request.getRequestDispatcher("/chapter1/dongwenchao/web/day1/failure.jsp").forward(request,response);
         }
     }
 }
