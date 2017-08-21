@@ -33,7 +33,13 @@ public class Test {
 
         Method m=c.getMethod(methodname);
         m.invoke(obj);
-
+//        Boolean a=PersonDao.delete(3);
+//        if (a==true){
+//            System.out.print("ok");
+//        }else {
+//            System.out.print("no");
+//        }
+//
 
     }
 }

@@ -4,10 +4,12 @@ import com.asiainfo.chapter1.liuwy.zuoye.Person;
 import com.asiainfo.chapter1.liuwy.zuoye.PersonBIZ;
 
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.soap.SAAJResult;
 import java.io.IOException;
 import java.util.List;
 
@@ -41,12 +43,21 @@ public class SelectServlet extends HttpServlet{
             int id=person.getId();
             String name=person.getName();
             int phone=person.getPhonenumber();
+            String address=person.getAddress();
+            String emil=person.getEmil();
+            int age=person.getBirth();
+
             System.out.println(id+" "+name+" "+phone);
+            //System.out.print(req.getParameter("name"));
+            //resp.sendRedirect("chapter1/liuwy/August18/message.jsp");
+            RequestDispatcher rd = req.getRequestDispatcher("chapter1/liuwy/August18/message.jsp");
             req.setAttribute("id",id);
             req.setAttribute("name",name);
-            req.setAttribute("phone",phone);
-            //System.out.print(req.getParameter("name"));
-            resp.sendRedirect("chapter1/liuwy/August18/message.jsp");
+            req.setAttribute("phone",phone);//存值
+            req.setAttribute("address",address);
+            req.setAttribute("emil",emil);
+            req.setAttribute("age",age);
+            rd.forward(req,resp);
         }
     }
 }
