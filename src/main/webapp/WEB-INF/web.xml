@@ -30,7 +30,7 @@
 
     <servlet-mapping>
         <servlet-name>HandleUserLogin</servlet-name>
-        <url-pattern>/tologin.do</url-pattern>
+        <url-pattern>/tologin</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>toLoginDemo</servlet-name>
@@ -38,7 +38,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>toLoginDemo</servlet-name>
-        <url-pattern>/toLoginDemo.do</url-pattern>
+        <url-pattern>/toLoginDemo</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>toUserIndexJsp</servlet-name>
@@ -163,17 +163,16 @@
         <servlet-name>updateBlogByUser</servlet-name>
         <url-pattern>/updateBlogByUser.do</url-pattern>
     </servlet-mapping>
-
-    <!--<filter>-->
-    <!--<filter-name>filterAllRequest</filter-name>-->
-    <!--<filter-class>util.FilterUtil.FilterDemo</filter-class>-->
-    <!--</filter>-->
-    <!--<filter-mapping>-->
-    <!--<filter-name>filterAllRequest</filter-name>-->
-    <!--<url-pattern>/*</url-pattern>-->
-    <!--</filter-mapping>-->
+    <!--用过滤器判断用户的登录状态-->
+    <filter>
+        <filter-name>filterAllRequest</filter-name>
+        <filter-class>com.asiainfo.chapter1.hanjunwen.webDemo.workDemo.util.FilterUtil.FilterDemo</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filterAllRequest</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
     <!--韩俊文-->
-
 
     <servlet>
         <servlet-name>TestServlet</servlet-name>

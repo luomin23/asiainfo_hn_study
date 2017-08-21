@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <form action="/tologin.do" method="post">
+    <form action="/tologin" method="post">
         用户名：<input type="text" name="username" required><br>
         密  码：<input type="password" name="pwd" required><br>
         <input type="submit" name="login" value="登录">

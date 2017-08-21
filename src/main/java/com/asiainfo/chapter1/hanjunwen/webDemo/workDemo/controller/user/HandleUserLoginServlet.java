@@ -30,7 +30,7 @@ public class HandleUserLoginServlet extends javax.servlet.http.HttpServlet {
             session.setAttribute("flag",flag);
             request.setAttribute("loginResult","用户名或密码错误！");
 //            System.out.println(request.getAttribute("loginResult"));
-            request.getRequestDispatcher("/toLoginDemo.do").forward(request,response);
+            request.getRequestDispatcher("/toLoginDemo").forward(request,response);
         }
 //        User user=ou.selectUserByUsername(username);
 //        if(username==null||username.equals("")){

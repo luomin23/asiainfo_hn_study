@@ -20,7 +20,7 @@
     <%=request.getSession().getAttribute("username")%>:<br>
     <form action="/updateBlogByUser.do" method="post">
         <input type="hidden" name="id" value=<%=blog.getId()%> />
-        作者：<input type="text" name="author" value=<%=blog.getAuthor()%> /><br>
+        作者：<input type="text" name="author" value=<%=blog.getAuthor()%> disabled/><br>
         标题：<input type="text" name="title" value=<%=blog.getTitle()%> /><br>
         内容：<textarea name="article" value=<%=blog.getArticle()%>><%=blog.getArticle()%></textarea><br>
         <input type="submit" name="updateBlogByUser" value="修改"><a href="/toUserIndex.do">返回主页</a>
