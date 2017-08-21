@@ -22,6 +22,133 @@
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/HelloServlet</url-pattern>
     </servlet-mapping>-->
+    <!--韩俊文-->
+    <!--用户登录--> <servlet>
+    <servlet-name>HandleUserLogin</servlet-name>
+    <servlet-class>com.asiainfo.chapter1.hanjunwen.webDemo.workDemo.controller.user.HandleUserLoginServlet</servlet-class>
+</servlet>
+
+    <servlet-mapping>
+        <servlet-name>HandleUserLogin</servlet-name>
+        <url-pattern>/tologin.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>toLoginDemo</servlet-name>
+        <jsp-file>/chapter1/hanjunwen/workDemo/login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>toLoginDemo</servlet-name>
+        <url-pattern>/toLoginDemo.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>toUserIndexJsp</servlet-name>
+        <jsp-file>/chapter1/hanjunwen/workDemo/userIndex.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>toUserIndexJsp</servlet-name>
+        <url-pattern>/toUserIndex.do</url-pattern>
+    </servlet-mapping>
+    <!--用户更新密码-->
+    <servlet>
+        <servlet-name>toUpdateUser</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.hanjunwen.webDemo.workDemo.controller.user.UserUpdatePwdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>toUpdateUser</servlet-name>
+        <url-pattern>/toUpdateUser.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>toUpdateUserJsp</servlet-name>
+        <jsp-file>/chapter1/hanjunwen/workDemo/updateUser.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>toUpdateUserJsp</servlet-name>
+        <url-pattern>/toUpdateUserJsp.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>updateUserOfPwd</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.hanjunwen.webDemo.workDemo.controller.user.UserUpdatePwdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateUserOfPwd</servlet-name>
+        <url-pattern>/updateUser.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>toUpdateUserResult</servlet-name>
+        <jsp-file>/chapter1/hanjunwen/workDemo/updateUserOfPwdResult.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>toUpdateUserResult</servlet-name>
+        <url-pattern>/toUpdateUserResult.do</url-pattern>
+    </servlet-mapping>
+
+    <!--发表博客-->
+    <servlet>
+        <servlet-name>toAddBlogJsp</servlet-name>
+        <jsp-file>/chapter1/hanjunwen/workDemo/addBlogByUser.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>toAddBlogJsp</servlet-name>
+        <url-pattern>/toAddBlogJsp.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addBlogByUser</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.hanjunwen.webDemo.workDemo.controller.blog.AddBlogByUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addBlogByUser</servlet-name>
+        <url-pattern>/addBlogByUser.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addBlogByUserResult</servlet-name>
+        <jsp-file>/chapter1/hanjunwen/workDemo/addBlogByUserResult.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addBlogByUserResult</servlet-name>
+        <url-pattern>/toAddBlogByUserResult.do</url-pattern>
+    </servlet-mapping>
+
+    <!--查询用户的所有博客-->
+
+    <servlet>
+        <servlet-name>getAllBlogsByUsername</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.hanjunwen.webDemo.workDemo.controller.blog.GetAllBlogsByUsernameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllBlogsByUsername</servlet-name>
+        <url-pattern>/getAllBlogsByUsername.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>toAllBlogsByUserJsp</servlet-name>
+        <jsp-file>/chapter1/hanjunwen/workDemo/allBlogsByUser.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>toAllBlogsByUserJsp</servlet-name>
+        <url-pattern>/toAllBlogsByUser.do</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>deleteBlogById</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.hanjunwen.webDemo.workDemo.controller.blog.DeleteBlogByIdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteBlogById</servlet-name>
+        <url-pattern>/deleteBlogById.do</url-pattern>
+    </servlet-mapping>
+
+    <!--<filter>-->
+    <!--<filter-name>filterAllRequest</filter-name>-->
+    <!--<filter-class>util.FilterUtil.FilterDemo</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+    <!--<filter-name>filterAllRequest</filter-name>-->
+    <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+    <!--韩俊文-->
+
+
     <servlet>
         <servlet-name>TestServlet</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_04.TestServlet</servlet-class>
