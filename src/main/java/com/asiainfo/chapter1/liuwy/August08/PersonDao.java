@@ -4,6 +4,7 @@ package com.asiainfo.chapter1.liuwy.August08;
 
 import com.asiainfo.chapter1.liuwy.zuoye.DBUtils;
 import com.asiainfo.chapter1.liuwy.zuoye.Person;
+import com.sun.org.apache.regexp.internal.RE;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -33,7 +34,7 @@ PersonDao {
         pstat.executeUpdate();
     }
 //查找
-    public static Person findByPhone(int phonenumber) throws ClassNotFoundException, SQLException{
+    public  Person findByPhone(int phonenumber) throws ClassNotFoundException, SQLException{
         String sql="select * from person where phonenumber=?";
         Connection conn= DBUtils.getConnection();
         PreparedStatement pstat=conn.prepareStatement(sql);
@@ -52,5 +53,30 @@ PersonDao {
         else {
             return null;}
    }
+    //删除
+    public void delete(int id) throws ClassNotFoundException, SQLException{
+        String sql="delete from person where id=?";
+        Connection conn= DBUtils.getConnection();
+        PreparedStatement pstat=conn.prepareStatement(sql);
+        pstat.setInt(1,id);
+        pstat.executeUpdate();
+    }
+
+    //修改
+    public void update(Person person) throws ClassNotFoundException, SQLException{
+        String sql="UPDATE person set name=?,phonenumber=?,address=?,emil=?,birth=? WHERE id=?";
+        Connection conn= DBUtils.getConnection();
+        PreparedStatement pstat=conn.prepareStatement(sql);
+        pstat.setString(1,person.getName());
+        pstat.setInt(2,person.getPhonenumber());
+        pstat.setString(3,person.getAddress());
+        pstat.setString(4,person.getEmil());
+        pstat.setInt(5,person.getBirth());
+        pstat.setInt(6,person.getId());
+
+        pstat.executeUpdate();
+    }
+
+
 
 }
