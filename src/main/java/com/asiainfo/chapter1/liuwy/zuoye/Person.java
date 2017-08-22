@@ -22,6 +22,15 @@ public class Person {
         this.birth = birth;
     }
 
+    public Person(int id, String name, int phonenumber, String address, String emil, int birth) {
+        this.id = id;
+        this.name = name;
+        this.phonenumber = phonenumber;
+        this.address = address;
+        this.emil = emil;
+        this.birth = birth;
+    }
+
     public int getId() {
         return id;
     }

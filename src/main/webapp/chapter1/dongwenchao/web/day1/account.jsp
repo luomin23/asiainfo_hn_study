@@ -16,8 +16,7 @@ String gn=request.getParameter("goo");
     session.setAttribute("goods",gn);
     String 客户=(String)session.getAttribute("a");
     String 姓名= (String) session.getAttribute("name");
-    姓名=new String(姓名.getBytes("ISO-8859-1"),"UTF-8");
-    String 商品=(String)session.getAttribute("goo");
+    String 商品=(String)session.getAttribute("goods");
 %>
 <%=客户%>的姓名是:<%=姓名%>
 商品是：<%=商品%>

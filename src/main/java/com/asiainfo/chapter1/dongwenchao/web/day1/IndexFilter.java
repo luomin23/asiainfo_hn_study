@@ -48,7 +48,7 @@ public class IndexFilter implements Filter {
         if (CheckLogin.login(username, password)) {
             System.err.println("check successfully cookie data ");
             request.getSession().setAttribute("username",username);
-            request.getRequestDispatcher("chapter1/dongwenchao/web/day1/main126.jsp").forward(request, response);
+            request.getRequestDispatcher("/chapter1/dongwenchao/web/day1/main126.jsp").forward(request, response);
         }else{
             arg2.doFilter(request,response );
         }
