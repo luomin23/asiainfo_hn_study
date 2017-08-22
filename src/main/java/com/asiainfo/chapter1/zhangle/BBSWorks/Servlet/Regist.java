@@ -37,7 +37,7 @@ public class Regist extends HttpServlet {
 
         }else{
             System.out.println("根据电话查询信息结果--信息已存在");
-            out.print("<script language='javascript'>alert('你已经注册过了,请登录');window.location.href='../chapter1/zhangle/BBSWorks/Login.jsp';</script>");
+            out.print("<script language='javascript'>alert('你已经注册过了,请登录');window.location.href='../chapter1/zhangle/BBSWorks/Index.jsp';</script>");
 
         }
 
