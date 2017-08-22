@@ -12,7 +12,7 @@
 </head>
 <body>
     <h2>如果不选中复选框使用getParameterValues()方法会出现500错误</h2>
-    <form action="../../../get" method="get">
+    <form action="/zl/get" method="get">
     <table>
         <tr>
             <td>姓名:</td>

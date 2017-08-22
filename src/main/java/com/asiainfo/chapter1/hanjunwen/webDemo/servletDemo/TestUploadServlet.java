@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.hanjunwen.servlet.servletDemo;
+package com.asiainfo.chapter1.hanjunwen.webDemo.servletDemo;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -8,6 +8,7 @@ import java.io.DataInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+
 
 public class TestUploadServlet extends HttpServlet {
     @Override

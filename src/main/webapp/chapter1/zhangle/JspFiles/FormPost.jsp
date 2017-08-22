@@ -11,7 +11,7 @@
     <title>get</title>
 </head>
 <body>
-<form action="/cookieServlet" method="post">
+<form action="/zl/cookieServlet" method="post">
     <table>
         <tr>
             <td>ĞÕÃû:</td>
