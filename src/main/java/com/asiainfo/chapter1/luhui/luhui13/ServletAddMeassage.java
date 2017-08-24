@@ -16,7 +16,8 @@ import java.util.Date;
  */
 
 public class ServletAddMeassage extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
      String author=new String(request.getParameter("author").getBytes("ISO-8859-1"),"UTF-8");
         String title=request.getParameter("title");
         String content=request.getParameter("content");
@@ -40,7 +41,7 @@ public class ServletAddMeassage extends HttpServlet {
             wordlist.add(mm);
             //将集合对象保存到应用上下文中
             scx.setAttribute("wordlist",wordlist);
-            response.sendRedirect("showMessage");
+            response.sendRedirect("chapter1/luhui/html1/showMessage.jsp");
         }
     }
 
