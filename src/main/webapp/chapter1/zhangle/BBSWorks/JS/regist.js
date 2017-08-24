@@ -50,6 +50,8 @@ function test(){
     }
 }
 
+
+
 function testUser() {
     alert("请先登录");
     document.getElementById("pdiv").style="display:' '";
@@ -100,11 +102,26 @@ function oneFunction(){
     w=window.open('send.html','', 'width=460,height=500');
     w.focus();
 }
-
-
+/*
+ * 个人信息界面
+ * 修改信息
+ * */
 function makesure(){
-    if(!confirm("确认提交修改后的个人信息")){
-        window.event.returnValue = false;
-        document.getElementById("edit").style="display:' '";
+    var email=document.getElementById("emails").value;
+    if(!(/^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$ /.test(email))){
+        alert("请填写正确的邮箱");
+        return false;
+    }else{
+        if(!confirm("确认提交修改后的个人信息")){
+            window.event.returnValue = false;
+        }
+        return true;
     }
+
+}
+function show() {
+    var ig=document.getElementById("imgs");
+    ig.style="display:' '";
+    
+    
 }

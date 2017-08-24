@@ -1,0 +1,114 @@
+/*head的样式*/
+.head{
+
+    height:120px;
+    width:90%;
+    font-size:24px;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:0.8%;
+    border-style:solid;
+    border-width: 1px;
+    border-color: blue;
+
+}
+.head img{
+    width:90px;
+    height:90px;
+    float:left;
+    margin-left:5%;
+    margin-right:10%;
+    margin-top:1%;
+}
+.select{
+    height:60px;
+    margin-left:14%;
+    margin-right:50%;
+    margin-top:3%;
+    border-style: hidden;
+    padding-left:10px;
+}
+
+/*level1的样式*/
+.level1 li{
+    float:left;
+    list-style:none;
+    margin-left:2%;
+}
+.level1 li a{
+    text-decoration: none;
+    color: black;
+}
+.level1 li a:visited{
+    text-decoration:none;  /*超链接无下划线*/
+}
+/*鼠标悬浮状态*/
+.level1 li a:hover{
+    color: blue;
+}
+
+/*登录*/
+.login{
+    float: left;
+    margin-top:-42px;
+    margin-left:53%;
+    margin-right:0;
+
+
+}
+.head .login #deng #button{
+    font-size:22px;
+    background:white;
+
+}
+.head .login #person{
+    margin-left:53%;
+    color: rgba(37, 25, 248, 0.8);
+}
+
+.content{
+    height:480px;
+    width:90%;
+    font-size:18px;
+    margin-left:5%;
+    margin-right:5%;
+    border-style:solid;
+    border-width: 1px;
+    border-color: blue;
+}
+#table{
+    height:470px;
+    width:100%;
+    border-style: hidden;
+}
+#tdleft{
+    height:auto;
+    width:20%;
+    border-right: solid;
+    border-width: 1px;
+    border-color: blue;
+}
+
+.left{
+    height:200px;
+    margin-left:5%;
+    margin-top:0;
+
+}
+#tdright{
+    height:460px;
+    width:80%;
+    border-right: solid;
+    border-width: 1px;
+    border-color: blue;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+
+}
+span{
+    color: gray;
+}
+
+

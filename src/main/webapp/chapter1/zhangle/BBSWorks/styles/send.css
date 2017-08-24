@@ -1,0 +1,48 @@
+.left{
+    float: left;
+    border-style:solid;
+    border-color: rgba(117, 155, 248, 0.76);
+    border-width:1px;
+    height:480px;
+    width:60px;
+
+}
+.left hr{
+    border-style:dashed;
+    border-color: rgba(117, 155, 248, 0.76);
+}
+
+.right{
+    height:480px;
+    width:340px;
+    float: left;
+    margin-top:0px;
+    border-style:solid;
+    border-color: rgba(117, 155, 248, 0.76);
+    border-width:1px;
+
+
+}
+.right #top{
+    width:250px;
+    height:40px;
+}
+.right #top #list #rleft{
+    list-style-type: square;
+    height:20px;
+}
+.right #top #list #rright{
+    list-style-type: none;
+    height:20px;
+    margin-right:0;
+    text-align: right;
+}
+
+.right #buttom{
+    margin-left:20px;
+    margin-top:300px;
+
+}
+.right #buttom #button{
+    margin-left:205px;
+}

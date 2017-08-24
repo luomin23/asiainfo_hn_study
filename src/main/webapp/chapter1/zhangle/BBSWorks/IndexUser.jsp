@@ -21,21 +21,40 @@
 
         </ul>
     </div>
-    <!--登录-->
-    <div class="login" id="login">
-        <div id="deng">
-            <%
-                User user=(User)session.getAttribute("userInfo");
-            %>
-            <h3>欢迎
-                <%=user.getName()%>
-                用户,您的使用</h3>
-        </div>
-        <div id="person">
-            <a href="person.jsp">USER</a>
-        </div>
+
+    <div class="content">
+        <table id="table">
+            <tr>
+                <td id="tdleft">
+                    <table class="left">
+                        <tr>
+                            <td><a href="TopTalks.jsp">校园时间</a><span>可去评论</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" target="main">经济交流</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" target="main">职业交流</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" target="main">情感天地</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" target="main">游戏地带</a></td>
+                        </tr>
+                    </table>
+
+                </td>
+                <td id="tdright">
+                    <iframe name="main" src=""></iframe>
+
+                </td>
+            </tr>
+        </table>
+
 
     </div>
+
 </div>
 
 </body>
