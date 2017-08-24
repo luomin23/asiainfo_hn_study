@@ -1,6 +1,7 @@
 package com.asiainfo.chapter1.zhangle.BBSWorks.DAO.Implement;
 
 import com.asiainfo.chapter1.zhangle.BBSWorks.DAO.UserDAO;
+import com.asiainfo.chapter1.zhangle.BBSWorks.Entity.Comment;
 import com.asiainfo.chapter1.zhangle.BBSWorks.Entity.User;
 import com.asiainfo.chapter1.zhangle.BBSWorks.JDBCUtil.JDBC;
 
@@ -8,7 +9,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -75,7 +75,28 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public void modityUser(String name) {
+    public void modityUser( String name,String email,String tele ) {
+        Connection conn=null;
+        PreparedStatement ps=null;
+        try {
+            conn=JDBC.getConnection();
+            String sql="UPDATE bbsuser set name=?,email=? where telephone=?";
+            ps=conn.prepareStatement(sql);
+            ps.setString(1,name);
+            ps.setString(2,email);
+            ps.setString(3,tele);
+            int i=ps.executeUpdate();
+            System.out.println("修改成功");
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("未找到JDBC");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            JDBC.close(conn,ps);
+        }
 
     }
+
+
 }

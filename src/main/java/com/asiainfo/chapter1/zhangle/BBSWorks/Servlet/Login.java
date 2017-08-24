@@ -24,11 +24,12 @@ public class Login extends HttpServlet {
         User user=us.selectByTelephone(name);
         if(user!=null){
             //登录成功
-            HttpSession session=request.getSession();
-            session.setAttribute("loginFlag","pass");
-            session.setAttribute("userInfo",user);
-            System.out.println("登录成功");
-            request.getRequestDispatcher("../chapter1/zhangle/BBSWorks/IndexUser.jsp").forward(request,response);
+                HttpSession session = request.getSession();
+                session.setAttribute("loginFlag", "pass");
+                session.setAttribute("userInfo", user);
+                System.out.println("登录成功");
+                request.getRequestDispatcher("../chapter1/zhangle/BBSWorks/Person.jsp").forward(request, response);
+
         }else {
             System.out.println("根据电话查询信息结果--信息不存在");
             out.print("<script language='javascript'>alert('你还未注册,请注册');window.location.href='../chapter1/zhangle/BBSWorks/Regist.jsp';</script>");
