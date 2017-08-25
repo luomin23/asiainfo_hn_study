@@ -4,6 +4,7 @@ import com.asiainfo.chapter1.zhangle.BBSWorks.Entity.User;
 import com.asiainfo.chapter1.zhangle.BBSWorks.Service.Implement.UserServiceImpl;
 import com.asiainfo.chapter1.zhangle.BBSWorks.Service.UserService;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +18,7 @@ import java.util.List;
  */
 public class Regist extends HttpServlet {
     UserService userService=new UserServiceImpl();
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         PrintWriter out=response.getWriter();
         String telephone=request.getParameter("telephone");
         String password=request.getParameter("pwd");
@@ -33,7 +34,7 @@ public class Regist extends HttpServlet {
             user.setPassword(password);
             userService.insertUser(user);
             System.out.println("添加至数据库成功");
-            request.getRequestDispatcher("../chapter1/zhangle/BBSWorks/Index.jsp");  //注册成功跳转至首页
+            request.getRequestDispatcher("../chapter1/zhangle/BBSWorks/IndexUser.jsp").forward(request,response);  //注册成功跳转至首页
 
         }else{
             System.out.println("根据电话查询信息结果--信息已存在");
@@ -42,7 +43,7 @@ public class Regist extends HttpServlet {
         }
 
     }
-    public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException {
+    public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException {
         doGet(request,response);
 
     }

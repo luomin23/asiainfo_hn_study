@@ -1,6 +1,7 @@
 package com.asiainfo.chapter1.zhangle.BBSWorks.DAO;
 
 import com.asiainfo.chapter1.zhangle.BBSWorks.Entity.Comment;
+import com.asiainfo.chapter1.zhangle.BBSWorks.Entity.PageInfo;
 
 import java.util.List;
 
@@ -9,5 +10,5 @@ import java.util.List;
  */
 public interface CommentDAO {
 
-    List<Comment> selectAllComment(int s);
+    PageInfo selectAllComment(int page, int pagecounts);
 }
