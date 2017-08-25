@@ -24,7 +24,7 @@
         <!--登录-->
         <div class="login" id="login" style="display:block">
             <div id="deng">
-                <form action="/zl/loginServlet" method="post">
+                <form action="/zl/loginServlet" method="get">
                     用户名:<input type="text" name="loginName" id="user" required maxlength="20" /><span>输入11位手机号</span><br />
                     密 码:<input type="password" name="loginPwd" id="password" required maxlength="20" />
                     &nbsp;&nbsp;<input type="submit" id="button" value="登陆" onclick="test()" />

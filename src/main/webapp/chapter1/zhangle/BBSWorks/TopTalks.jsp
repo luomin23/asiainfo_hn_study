@@ -36,7 +36,7 @@
                             <td><a href="upload.jsp" target="main">上传话题</a></td>
                         </tr>
                         <tr>
-                            <td><a href="comment.jsp" target="main">查询话题</a></td>
+                            <td><a href="/zl/commentsfirst" target="main">查询话题</a></td>
                         </tr>
 
                     </table>
