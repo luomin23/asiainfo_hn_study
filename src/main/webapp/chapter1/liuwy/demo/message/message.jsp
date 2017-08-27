@@ -30,34 +30,38 @@
     <tr>
         <td>id</td>
         <td>姓名</td>
-        <td>手机号</td>
+        <td>年龄</td>
         <td>地址</td>
         <td>邮箱</td>
-        <td>年龄</td>
+
     </tr>
     <tr><%
         int id=(Integer) request.getAttribute("id");
         String name=(String) request.getAttribute("name");
-        int phone=(Integer) request.getAttribute("phone");
+        int age=(Integer) request.getAttribute("age");
         String  address=(String ) request.getAttribute("address");
         String emil=(String) request.getAttribute("emil");
-        int age=(Integer) request.getAttribute("age");%>
+        %>
 
         <td><%=id%></td>
         <td><%=name%></td>
-        <td><%=phone%></td>
+        <td><%=age%></td>
         <td><%=address%></td>
         <td><%=emil%></td>
-        <td><%=age%></td>
+
     </tr>
     <tr>
 
-        <td colspan="6">
-            <input type="button" name="delete" value="删除" onclick="window.location.href ='deleteservlet.do?id=<%=id%>';alert('删除成功！')">
+        <td colspan="5">
+            <%int user=(Integer)session.getAttribute("admin");
+                if(user==1){%>
+            <input type="button" name="delete" value="删除" onclick="window.location.href ='deleteservlet.do?id=<%=id%>';"><%}else {%>
             <input type="button" name="update" value="修改"
-                   onclick="window.location.href ='chapter1/liuwy/August21/update.jsp?id=<%=id%>&name=<%=name%>&phone=<%=phone%>&address=<%=address%>&emil=<%=emil%>&age=<%=age%>'">
+                   onclick="window.location.href ='/asiainfo_hn_study/chapter1/liuwy/demo/update.jsp?id=<%=id%>&name=<%=name%>&age=<%=age%>&address=<%=address%>&emil=<%=emil%>'">
+            <%}%>
         </td>
     </tr>
-</table>
+</table><br>
+<button onclick="history.back()">返回</button>
 </body>
 </html>

@@ -13,12 +13,13 @@
 <body>
 <form action="/registservlet.do" method="post">
     姓名：<input type="text" name="name"><br>
-    电话：<input type="text" name="phonenumber"><br>
+    密码：<input type="p" name="password"><br>
+    年龄：<input type="text" name="age"><br>
     地址：<input type="text" name="address"><br>
     邮箱：<input type="text" name="emil"><br>
-    年龄：<input type="text" name="age"><br>
     <input type="submit" value="提交">
 
-</form>
+</form><br>
+<button onclick="history.back()">返回</button>
 </body>
 </html>

@@ -11,10 +11,10 @@
     <title>登录</title>
 </head>
 <body>
-<form>
+<form action="/loginservlet.do" method="post">
     用户名：<input type="text" name="username"><br>
     密码：<input type="password" name="password" ><br>
-    <%--<input type="checkbox" name="isSave" value="1">保存7天用户名<br>--%>
+    <%--<input type="checkbox" name="isSave"  value="1">保存7天用户名<br>--%>
     <input type="submit" value="登录">
     <a href="register.jsp">注册</a>
 </form>
