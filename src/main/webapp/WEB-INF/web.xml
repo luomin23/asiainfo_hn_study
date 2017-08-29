@@ -114,6 +114,42 @@
         <filter-name>loginfilterzl</filter-name>
         <url-pattern>/zl/talks</url-pattern>
     </filter-mapping>
+    <filter-mapping>
+        <filter-name>loginfilterzl</filter-name>
+        <url-pattern>/zl/insertcomment</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>insertcomment</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangle.BBSWorks.Servlet.InsertCommentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>insertcomment</servlet-name>
+        <url-pattern>/zl/insertcomment</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteallComment</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangle.BBSWorks.Servlet.DeleteAllCommentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteallComment</servlet-name>
+        <url-pattern>/zl/commentDeleteAll</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteComment</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangle.BBSWorks.Servlet.DeleteCommentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteComment</servlet-name>
+        <url-pattern>/zl/deletecomment</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>filedown</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangle.BBSWorks.Servlet.DownFileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>filedown</servlet-name>
+        <url-pattern>/zl/downfile</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>datepaging</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangle.BBSWorks.Servlet.DatePagingServlet</servlet-class>
