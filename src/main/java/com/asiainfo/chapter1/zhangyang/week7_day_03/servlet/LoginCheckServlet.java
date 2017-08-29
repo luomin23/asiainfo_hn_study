@@ -1,8 +1,8 @@
-package com.asiainfo.chapter1.zhangyang.week6_day_05.service;
+package com.asiainfo.chapter1.zhangyang.week7_day_03.servlet;
 
-import com.asiainfo.chapter1.zhangyang.week6_day_03.Entity.User;
-import com.asiainfo.chapter1.zhangyang.week6_day_05.dao.PersonDao;
-import com.asiainfo.chapter1.zhangyang.week6_day_05.entity.Person;
+
+import com.asiainfo.chapter1.zhangyang.week7_day_03.daoimpl.PersonDaoimpl;
+import com.asiainfo.chapter1.zhangyang.week7_day_03.entity.Person;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,14 +25,14 @@ public class LoginCheckServlet extends HttpServlet {
         Person person = new Person();
         person.setUserName(userName);
         person.setUserPassword(userPassword);
-        PersonDao dao = new PersonDao();
-        if(dao.checkPerson(person)){
+        //PersonDao dao = new PersonDao();
+        PersonDaoimpl daoimpl = new PersonDaoimpl();
+        if(daoimpl.checkPerson(person)){
             HttpSession session = request.getSession();
             session.setAttribute("person",person);
-            request.getRequestDispatcher("/chapter1/zhangyang/week6_day_05/main.jsp").forward(request,response);
+            request.getRequestDispatcher("/chapter1/zhangyang/week7_day_03/main.jsp").forward(request,response);
         }else {
-            request.setAttribute("message", "用户名或密码错误");
-            request.getRequestDispatcher("/chapter1/zhangyang/week6_day_05/login1.jsp").forward(request, response);
+            request.getRequestDispatcher("/chapter1/zhangyang/week7_day_03/error.jsp").forward(request, response);
         }
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -1,10 +1,9 @@
-package com.asiainfo.chapter1.zhangyang.week6_day_05.service;
+package com.asiainfo.chapter1.zhangyang.week7_day_03.servlet;
 
-import com.asiainfo.chapter1.zhangyang.week6_day_05.dao.PersonDao;
-import com.asiainfo.chapter1.zhangyang.week6_day_05.entity.Person;
+import com.asiainfo.chapter1.zhangyang.week7_day_03.daoimpl.PersonDaoimpl;
+import com.asiainfo.chapter1.zhangyang.week7_day_03.entity.Person;
 
 import javax.servlet.ServletException;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,12 +25,10 @@ public class RegsiterServlet extends HttpServlet {
         person.setUserName(userName);
         person.setUserPassword(userPassword);
         person.setUserSex(userSex);
-        PersonDao personDao = new PersonDao();
-        System.out.println(person.getUserName());
-        System.out.println(person.getUserPassword());
-        System.out.println(person.getUserSex());
-        personDao.insertUser(person);
-        request.getRequestDispatcher("/chapter1/zhangyang/week6_day_05/login1.jsp").forward(request,response);
+       // PersonDao personDao = new PersonDao();
+        PersonDaoimpl daoimpl = new PersonDaoimpl();
+        daoimpl.insertUser(person);
+        request.getRequestDispatcher("/chapter1/zhangyang/week7_day_03/login1.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

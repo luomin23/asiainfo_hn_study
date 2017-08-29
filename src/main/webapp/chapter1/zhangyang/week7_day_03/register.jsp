@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/chapter1/zhangyang/week6_day_05/css/register.css">
+    <link rel="stylesheet" type="text/css" href="/chapter1/zhangyang/week7_day_03/css/table.css">
 </head>
 <body>
     <form action="/RegisterServlet" method="post">
