@@ -31,7 +31,7 @@ public class RegsiterServlet extends HttpServlet {
         System.out.println(person.getUserPassword());
         System.out.println(person.getUserSex());
         personDao.insertUser(person);
-        request.getRequestDispatcher("/chapter1/zhangyang/week6_day_05/login.jsp").forward(request,response);
+        request.getRequestDispatcher("/chapter1/zhangyang/week6_day_05/login1.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
