@@ -100,11 +100,11 @@
         <a href="/toUserIndexWithPage?page=1">首页</a>
         <%
             if(a==1){%>
-        第<%=a%>页<a href="/toUserIndexWithPage?page=<%=a+1%>">下一页</a>
+        第<%=a%>页,共<%=pu.getPageCount(pu.getRows(),3)%>页<a href="/toUserIndexWithPage?page=<%=a+1%>">下一页</a>
         <%}else if(a<pu.getPageCount(pu.getRows(),3)){%>
-        <a href="/toUserIndexWithPage?page=<%=a-1%>">上一页</a>第<%=a%>页<a href="/toUserIndexWithPage?page=<%=a+1%>">下一页</a>
+        <a href="/toUserIndexWithPage?page=<%=a-1%>">上一页</a>第<%=a%>页,共<%=pu.getPageCount(pu.getRows(),3)%>页<a href="/toUserIndexWithPage?page=<%=a+1%>">下一页</a>
         <%}else{%>
-        <a href="/toUserIndexWithPage?page=<%=a-1%>">上一页</a>第<%=a%>页
+        <a href="/toUserIndexWithPage?page=<%=a-1%>">上一页</a>第<%=a%>页,共<%=pu.getPageCount(pu.getRows(),3)%>页
         <%}
         %>
         <a href="toUserIndexWithPage?page=<%=pu.getPageCount(pu.getRows(),3)%>">尾页</a>

@@ -115,11 +115,11 @@
             <a href="/getAllBlogsByUsernameWithPage.do?page=1">首页</a>
         <%
             if(a==1){%>
-        第<%=a%>页<a href="/getAllBlogsByUsernameWithPage.do?page=<%=a+1%>">下一页</a>
+        第<%=a%>页,共<%=pu.getPageCount(pu.getRows(),2)%>页<a href="/getAllBlogsByUsernameWithPage.do?page=<%=a+1%>">下一页</a>
         <%}else if(a<pu.getPageCount(pu.getRows(),2)){%>
-        <a href="/getAllBlogsByUsernameWithPage.do?page=<%=a-1%>">上一页</a>第<%=a%>页<a href="/getAllBlogsByUsernameWithPage.do?page=<%=a+1%>">下一页</a>
+        <a href="/getAllBlogsByUsernameWithPage.do?page=<%=a-1%>">上一页</a>第<%=a%>页,共<%=pu.getPageCount(pu.getRows(),2)%>页<a href="/getAllBlogsByUsernameWithPage.do?page=<%=a+1%>">下一页</a>
         <%}else{%>
-        <a href="/getAllBlogsByUsernameWithPage.do?page=<%=a-1%>">上一页</a>第<%=a%>页
+        <a href="/getAllBlogsByUsernameWithPage.do?page=<%=a-1%>">上一页</a>第<%=a%>页,共<%=pu.getPageCount(pu.getRows(),2)%>页
         <%}
         %><a href="/getAllBlogsByUsernameWithPage.do?page=<%=pu.getPageCount(pu.getRows(),2)%>">尾页</a>
             <form action="/toJumpPage" method="get">
