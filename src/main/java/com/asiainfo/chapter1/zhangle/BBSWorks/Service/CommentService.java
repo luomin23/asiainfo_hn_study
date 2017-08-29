@@ -10,4 +10,8 @@ import java.util.List;
  */
 public interface CommentService {
     PageInfo selectAllComment(int page, int pagecounts);
+
+    void deletComments(int id);
+
+    void insertComment(String username, String comment);
 }

@@ -25,6 +25,9 @@ public class LoginFlter implements Filter {
         HttpServletResponse hresponse=(HttpServletResponse)servletResponse;
         HttpSession session= hrequest.getSession();  //request 是HttpServletRequest 相互对应
         String loginFlag=(String) session.getAttribute("loginFlag");
+        String username=(String)session.getAttribute("userInfo");
+        session.setAttribute("username",username);
+        System.out.println("用户名:"+ username);
         System.out.println("登录过滤启动");
         if("pass".equals(loginFlag)){
 

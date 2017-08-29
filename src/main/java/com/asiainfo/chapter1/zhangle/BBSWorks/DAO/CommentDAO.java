@@ -11,4 +11,8 @@ import java.util.List;
 public interface CommentDAO {
 
     PageInfo selectAllComment(int page, int pagecounts);
+
+    void deletCommentById(int id);
+
+    void insertComment(String username, String comment);
 }

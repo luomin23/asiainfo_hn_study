@@ -43,14 +43,15 @@ public class CommentDAOImpl implements CommentDAO{
             }else if(page>=pagesn){
                 page=pagesn;
             }
-            String sql="select comments from Comment limit ?,?";
+            String sql="select id,comments from Comment limit ?,?";
             ps=conn.prepareStatement(sql);
             ps.setInt(1,(page-1)*pagecounts);  //1飘红时忽略掉错误即可
             ps.setInt(2,pagecounts);
             rs=ps.executeQuery();
             while(rs.next()){
                 Comment com=new Comment();
-                com.setComments(rs.getString(1));
+                com.setId(rs.getInt(1));
+                com.setComments(rs.getString(2));
                 coms.add(com);
             }
             pageInfo=new PageInfo(page,pagecounts,Counts);
@@ -70,5 +71,49 @@ public class CommentDAOImpl implements CommentDAO{
             JDBC.close(conn,ps,rs);
         }
         return pageInfo;
+    }
+
+    @Override
+    public void deletCommentById(int id) {
+        Connection conn=null;
+        PreparedStatement ps=null;
+        try {
+            conn=JDBC.getConnection();
+            String sql="DELETE FROM comment where id=?";
+            ps=conn.prepareStatement(sql);
+            ps.setInt(1,id);
+            int i=ps.executeUpdate();
+            System.out.println("删除成功");
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("未找到JDBC");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            JDBC.close(conn,ps);
+        }
+
+    }
+
+    @Override
+    public void insertComment(String username, String comment) {
+        Connection conn=null;
+        PreparedStatement ps=null;
+        try {
+            conn= JDBC.getConnection();
+            String sql="insert into comment values(?,?)";
+            ps=conn.prepareStatement(sql);
+            ps.setString(1,username);
+            ps.setString(2,comment);
+            ps.executeUpdate();
+            System.out.println("添加成功");
+        } catch (ClassNotFoundException e) {
+            System.out.println("未找到JDBC");
+        } catch (SQLException e) {
+            System.out.println("连接数据库异常");
+            e.printStackTrace();
+        }finally {
+            JDBC.close(conn,ps);
+        }
     }
 }
