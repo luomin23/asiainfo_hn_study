@@ -24,7 +24,12 @@
 
         图片:<input type="file" name="myfile" /><br>
         <input type="submit" value="上传" onclick="show()"/>
-    </form>
+    </form>s
+    <div>
+        <a href="/zl/downfile?filename=logo.png">
+            下载:<img src="/chapter1/zhangle/BBSWorks/upload/logo.png" width="100px" height="100px" />
+        </a>
+    </div>
 <script>
     function show() {
         var ig=document.getElementById("imgs");

@@ -43,7 +43,10 @@
 
     </ol>
     <div id="pdiv">
-        <input type="text" id="ptext" maxlength="25" /><input type="button" value="发表" onclick="addPing()" /><span>最多输入25个字</span>
+        <form action="/zl/insertcomment" method="post">
+            <input type="text" id="ptext" name="commentadd" maxlength="25" />
+            <input type="submit" value="发表" onclick="addPing()" /><span>最多输入25个字</span>
+        </form>
     </div>
 </div>
 </div>

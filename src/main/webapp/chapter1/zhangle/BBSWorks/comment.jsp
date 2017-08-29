@@ -33,40 +33,75 @@
     </style>
 </head>
 <body>
-
-    <label>
-        用户名:<input type="text" name="teles" /><span>11位手机号</span>
-    </label><br />
+    <br />
     <div>
-        <table  cellpadding="0" cellspacing="0"  border="1" width="400px">
-            <thead>
-            <tr>
-                <th>评论</th>
-                <th>操作</th>
-            </tr>
-            </thead>
-            <c:forEach var="comment" items="${requestScope.pageInfo.comment}">
+        <form action="/zl/commentDeleteAll" method="post">
+            <table  cellpadding="0" cellspacing="0"  border="1" width="400px">
+                <thead>
+                    <tr>
+                        <th>
+                            全选<input type="checkbox" id="checkall" name="checkall" onclick="checkAll()" /><br>
+                            <input type="submit" value="删除"  onclick="return confirm('确定删除吗？')" align="left">
+                        </th>
+                        <th>编号</th>
+                        <th>评论</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <c:forEach var="comment" items="${requestScope.pageInfo.comment}">
+                    <tr>
+                        <td>
+                            <input type="checkbox" id='${comment.id}' name='selectComment' value= '${comment.id}' />
+                        </td>
+                        <td>${comment.id}</td>
+                        <td>${comment.comments}</td>
+                        <td><a href= "/zl/deletecomment?commentId=${comment.id}" onclick="deleteOne(${comment.id})">删除</a></td>
+                    </tr>
+                </c:forEach>
+
                 <tr>
-                    <td>${comment.comments}</td>
+                    <td colspan="4">
+
+                        <span>共${requestScope.pageInfo.pages}页:</span>
+                        <span>${requestScope.pageInfo.page}/${requestScope.pageInfo.pages}</span>
+                        <span><a href="/zl/pagings?page=1">首页</a> </span>
+                        <span><a href="/zl/pagings?page=${requestScope.pageInfo.page-1}">上一页</a></span>
+                        <span><a href="/zl/pagings?page=${requestScope.pageInfo.page+1}">下一页</a></span>
+                        <span><a href="/zl/pagings?page=${requestScope.pageInfo.pages}">尾页</a></span>
+
+                    </td>
                 </tr>
-            </c:forEach>
+            </table>
+        </form>
+        <form action="/zl/commentDeleteAll" method="post">
+            <table cellpadding="0" cellspacing="0"  border="1" width="400px">
+                <tr>
+                    <td>
+                        <input type="text" name="selectpageone" /><input type="submit" value="GO"/>
 
-            <tr>
-                <td colspan="2">
-
-                    <span>共${requestScope.pageInfo.pages}页:</span>
-                    <span>${requestScope.pageInfo.page}/${requestScope.pageInfo.pages}</span>
-                    <span><a href="/zl/pagings?page=1">首页</a> </span>
-                    <span><a href="/zl/pagings?page=${requestScope.pageInfo.page-1}">上一页</a></span>
-                    <span><a href="/zl/pagings?page=${requestScope.pageInfo.page+1}">下一页</a></span>
-                    <span><a href="/zl/pagings?page=${requestScope.pageInfo.pages}">尾页</a></span>
-
-                </td>
-            </tr>
-        </table>
+                    </td>
+                </tr>
+            </table>
+        </form>
 
 
 </div>
+
+<script>
+    function checkAll() {
+        var checkall=document.getElementById("checkall");
+        var select=document.getElementsByName("selectComment");
+        if(checkall.checked==true){
+            for(var i=0;i<select.length;i++){
+                select[i].checked=true;
+            }
+        }else{
+            for(var i=0;i<select.length;i++) {
+                select[i].checked = false;
+            }
+        }
+    }
+</script>
 
 </body>
 </html>
