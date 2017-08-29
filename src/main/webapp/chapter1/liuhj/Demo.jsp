@@ -11,6 +11,9 @@
     <title>$Title$</title>
 </head>
 <body>
-$END$
+这个是JSP演示页面
+<%
+    System.out.println("资源。。。");
+%>
 </body>
 </html>

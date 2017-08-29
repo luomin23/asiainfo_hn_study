@@ -44,4 +44,36 @@ public class PersonBIZ {
             DBUtils.closeConnection();
         }
     }
+
+    //删除
+    public boolean delete(int id){
+        PersonDao personDao=new PersonDao();
+        try {
+            personDao.delete(id);
+            return true;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }finally {
+            DBUtils.closeConnection();
+        }
+    }
+    public boolean update(Person person){
+        PersonDao personDao=new PersonDao();
+        try {
+            personDao.update(person);
+            return true;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            DBUtils.closeConnection();
+        }
+    }
 }

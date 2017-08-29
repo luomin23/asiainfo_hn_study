@@ -86,4 +86,51 @@ public class OperationBlogDAOImpl implements OperationBlogDAO {
         }
         return result;
     }
+    public Blog getBlogById(int id) {
+        Connection conn = JdbcUtil.getConnection();
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+        Blog blog=new Blog();
+        String sql="select * from blog where id=?";
+        try {
+            pst=conn.prepareStatement(sql);
+            pst.setInt(1,id);
+            rs=pst.executeQuery();
+            while (rs.next()){
+                blog.setId(rs.getInt("Id"));
+                blog.setTitle(rs.getString("title"));
+                blog.setArticle(rs.getString("article"));
+                blog.setAuthor(rs.getString("author"));
+            }
+            rs.close();
+            pst.close();
+            JdbcUtil.closeConnection(conn);
+            return blog;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return blog;
+    }
+
+    @Override
+    public boolean updateBlogByUser(Blog blog) {
+        Connection conn=JdbcUtil.getConnection();
+        Boolean result = false;
+        PreparedStatement pst=null;
+        String sql="update blog set title=?,article=?,author=? where id=?";
+        try {
+            pst=conn.prepareStatement(sql);
+            pst.setString(1,blog.getTitle());
+            pst.setString(2,blog.getArticle());
+            pst.setString(3,blog.getAuthor());
+            pst.setInt(4,blog.getId());
+            pst.executeUpdate();
+            pst.close();
+            JdbcUtil.closeConnection(conn);
+            result=true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }

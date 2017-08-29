@@ -1,0 +1,92 @@
+.head{
+
+    height:120px;
+    width:70%;
+    margin-left:15%;
+    margin-right:5%;
+    margin-top:0.8%;
+    border-style:solid;
+    border-width: 1px;
+    border-color: blue;
+}
+.head img{
+    width:90px;
+    height:90px;
+    float:left;
+    margin-left:5%;
+    margin-right:10%;
+    margin-top:1%;
+}
+.head .headend{
+    font-size: 20px;
+    position:absolute;
+    margin-left:50%;
+    margin-top: 90px;
+}
+.head .headend a{
+    text-decoration: none;
+    color: black;
+}
+.head .headend a:visited{
+    text-decoration:none;  /*超链接无下划线*/
+}
+/*鼠标悬浮状态*/
+.head .headend a:hover{
+    color: blue;
+}
+
+h3{
+    margin-left: 4%;
+}
+
+.leftpart{
+    height:480px;
+    width:30%;
+    float:left;
+    font-size:18px;
+    margin-left:15%;
+    border-style:solid;
+    border-width: 1px;
+    border-color: blue;
+}
+.leftpart ul{
+    margin-left: 5%;
+}
+
+.leftpart ul li{
+    color: black;
+    list-style-type: disc;
+}
+
+/*鼠标悬浮状态*/
+.leftpart ul li:hover{
+    color: blue;
+}
+
+.rightpart{
+    height:480px;
+    width:39.8%;
+    float:left;
+    font-size:18px;
+    border-style:solid;
+    border-width: 1px;
+    border-color: blue;
+}
+
+table{
+    width:70%;
+    margin-left: 20%;
+    margin-right: 10%;
+    margin-top: 5%;
+    border-collapse: collapse;
+    border-style: hidden;
+    cellpadding:"1";
+
+}
+.rightpart #edit table tr td{
+    height: 50px;
+}
+.rightpart #edit table tr td #button{
+    margin-left:15%;
+    font-size: 18px;
+}

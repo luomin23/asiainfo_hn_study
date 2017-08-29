@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
-  <display-name>Archetype Created Web Application</display-name>
+    <display-name>Archetype Created Web Application</display-name>
     <!--<servlet>
         <init-param>
             <param-name>company</param-name>
@@ -171,22 +171,22 @@
         <servlet-name>Cookie</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangyang.week6_day_02.CookieDemo02</servlet-class>
     </servlet>-->
-  <!--  <servlet-mapping>
-        <servlet-name>Cookie</servlet-name>
-        <url-pattern>/Cookie</url-pattern>
+    <!--  <servlet-mapping>
+          <servlet-name>Cookie</servlet-name>
+          <url-pattern>/Cookie</url-pattern>
 
-        <servlet-name>Servlet4PostValue</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>-->
-<!-- 张扬-->
-<servlet>
-    <servlet-name>SconfigServlet</servlet-name>
-    <servlet-class>com.asiainfo.chapter1.liuhj.August14.SconfigServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-    <servlet-name>SconfigServlet</servlet-name>
-    <url-pattern>/SconfigServlet</url-pattern>
-</servlet-mapping>
+          <servlet-name>Servlet4PostValue</servlet-name>
+          <url-pattern>/hello</url-pattern>
+      </servlet-mapping>-->
+    <!-- 张扬-->
+    <servlet>
+        <servlet-name>SconfigServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August14.SconfigServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SconfigServlet</servlet-name>
+        <url-pattern>/SconfigServlet</url-pattern>
+    </servlet-mapping>
 
 
 
@@ -353,14 +353,14 @@
     </servlet-mapping>
     <!--filter 字符编码格式过滤  /*过滤所有的servlet-->
 
-<filter>
-    <filter-name>CharactorFilter</filter-name>
-    <filter-class>com.asiainfo.chapter1.dongwenchao.web.day2.CharactorFilter</filter-class>
-    <init-param>
-        <param-name>encoding</param-name>
-        <param-value>UTF-8</param-value>
-    </init-param>
-</filter>
+    <filter>
+        <filter-name>CharactorFilter</filter-name>
+        <filter-class>com.asiainfo.chapter1.dongwenchao.web.day2.CharactorFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
     <filter-mapping>
         <filter-name>CharactorFilter</filter-name>
         <url-pattern>/*</url-pattern>

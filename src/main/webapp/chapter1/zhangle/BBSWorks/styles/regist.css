@@ -1,0 +1,71 @@
+/*head的样式*/
+.head{
+
+    height:120px;
+    width:70%;
+    margin-left:15%;
+    margin-right:5%;
+    margin-top:0.8%;
+    border-style:solid;
+    border-width: 1px;
+    border-color: blue;
+}
+.head img{
+    width:90px;
+    height:90px;
+    float:left;
+    margin-left:5%;
+    margin-right:10%;
+    margin-top:1%;
+}
+.head .headend{
+    font-size: 20px;
+    position:absolute;
+    margin-left:50%;
+    margin-top: 90px;
+}
+.head .headend a{
+    text-decoration: none;
+    color: black;
+}
+.head .headend a:visited{
+    text-decoration:none;  /*超链接无下划线*/
+}
+/*鼠标悬浮状态*/
+.head .headend a:hover{
+    color: blue;
+}
+
+table{
+    width:70%;
+    margin-left: 20%;
+    margin-right: 10%;
+    margin-top: 5%;
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a1a1a1;
+    cellpadding:"1";
+
+}
+.content table tr td{
+    height: 50px;
+}
+/*tr的第一个子元素右靠齐*/
+.content tr td:first-child{
+    text-align: right;
+}
+span{
+    color: gray;
+}
+
+.content{
+    height:480px;
+    width:70%;
+    font-size:18px;
+    margin-left:15%;
+    margin-right:5%;
+    border-style:solid;
+    border-width: 1px;
+    border-color: blue;
+}
