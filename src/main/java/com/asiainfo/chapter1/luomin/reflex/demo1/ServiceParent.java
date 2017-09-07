@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.luomin.reflex;
+package com.asiainfo.chapter1.luomin.reflex.demo1;
 
 /**
  * Created by Luoo on 2017/8/4.

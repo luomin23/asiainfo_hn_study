@@ -86,7 +86,7 @@ public class Client implements Runnable {
         new Thread(client).start();
 
 
-        //client.sendFirstMsg();
+        //JavassistClient.sendFirstMsg();
 
 
     }

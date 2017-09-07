@@ -12,7 +12,7 @@ import java.net.UnknownHostException;
 public class TextClient {
     public static void main(String[] args) throws UnknownHostException, IOException {
         Socket s = new Socket("127.0.0.1", 4006);
-        BufferedReader bufr = new BufferedReader(new FileReader("C:\\idea_workspace\\asiainfo_hn_study\\src\\main\\java\\com\\asiainfo\\chapter1\\luomin\\net\\tcp\\client.txt"));
+        BufferedReader bufr = new BufferedReader(new FileReader("C:\\idea_workspace\\asiainfo_hn_study\\src\\main\\java\\com\\asiainfo\\chapter1\\luomin\\net\\tcp\\JavassistClient.txt"));
         PrintWriter out = new PrintWriter(s.getOutputStream(), true);
         //out.println(time);
         String line = null;

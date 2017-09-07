@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.luomin.reflex;
+package com.asiainfo.chapter1.luomin.reflex.demo1;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;

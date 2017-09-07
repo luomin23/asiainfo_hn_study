@@ -1,4 +1,4 @@
-package com.asiainfo.chapter1.luomin.reflex;
+package com.asiainfo.chapter1.luomin.reflex.demo1;
 
 /**
  * @author Luoo

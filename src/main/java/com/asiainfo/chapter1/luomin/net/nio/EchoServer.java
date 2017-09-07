@@ -265,7 +265,7 @@ public class EchoServer {
                 String msg = Charset.forName("UTF-8").decode(temp).toString();
 
 
-//                System.out.println("Server received [" + msg + "] from client address:" + sc.getRemoteAddress());
+//                System.out.println("Server received [" + msg + "] from JavassistClient address:" + sc.getRemoteAddress());
 
 
                 Thread.sleep(1000);

@@ -57,7 +57,7 @@ public class NioServer {
                         SocketChannel channel = server.accept();
                         channel.configureBlocking(false);
                         //向客户端发消息
-                        channel.write(ByteBuffer.wrap(new String("send messsage to client").getBytes()));
+                        channel.write(ByteBuffer.wrap(new String("send messsage to JavassistClient").getBytes()));
                         //在与客户端连接成功后,为客户端通道注册SelectionKey.OP_READ事件
                         channel.register(selector, SelectionKey.OP_READ);
                         System.out.println("客户端请求连接事件");
@@ -70,7 +70,7 @@ public class NioServer {
                         int read = channel.read(buffer);
                         byte[] data = buffer.array();
                         String message = new String(data);
-                        System.out.println("recive message from client,size: " + buffer.position() + "msg:" + message);
+                        System.out.println("recive message from JavassistClient,size: " + buffer.position() + "msg:" + message);
                     }
                 }
             }
