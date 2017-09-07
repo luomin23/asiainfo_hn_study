@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -26,10 +27,12 @@ public class LoginCheckServlet extends HttpServlet {
         person.setUserPassword(userPassword);
         PersonDao dao = new PersonDao();
         if(dao.checkPerson(person)){
+            HttpSession session = request.getSession();
+            session.setAttribute("person",person);
             request.getRequestDispatcher("/chapter1/zhangyang/week6_day_05/main.jsp").forward(request,response);
         }else {
             request.setAttribute("message", "用户名或密码错误");
-            request.getRequestDispatcher("/chapter1/zhangyang/week6_day_05/login.jsp").forward(request, response);
+            request.getRequestDispatcher("/chapter1/zhangyang/week6_day_05/login1.jsp").forward(request, response);
         }
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

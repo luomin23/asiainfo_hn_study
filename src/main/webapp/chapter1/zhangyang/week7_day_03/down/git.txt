@@ -1,0 +1,64 @@
+del@DESKTOP-KK061A4 MINGW64 /
+$ pwd   //查看当前目录
+/
+
+del@DESKTOP-KK061A4 MINGW64 /
+$ mkdir newone  //创建目录
+
+del@DESKTOP-KK061A4 MINGW64 /
+$ cd newone //进入指定的newone目录
+
+del@DESKTOP-KK061A4 MINGW64 /newone
+$ ls //查询此目录下的所有
+
+del@DESKTOP-KK061A4 MINGW64 /newone
+$ git config --list //查看配置主要是看username 和user.email是否符合注册git时填写的内容 符合则跳过下一步 否则配置这两项
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+http.sslcainfo=D:/Git/Git/mingw64/ssl/certs/ca-bundle.crt
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+credential.helper=manager
+
+//没有的话配置这两项 “”内的是 username 和user.email是注册git的时候的
+$ git config --global user.name " "
+$ git config --global user.email " "
+
+del@DESKTOP-KK061A4 MINGW64 /newone   //进入之前创建好的文件夹下
+$ git clone  https://github.com/luomin23/asiainfo_hn_study.git//克隆项目
+Cloning into 'asiainfo_hn_study'...
+remote: Counting objects: 180, done.
+remote: Compressing objects: 100% (81/81), done.
+tal 180 (delta 24), reused 175 (delta 20), pack-reused 0
+Receiving objects: 100% (180/180), 13.08 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (24/24), done.
+Checking connectivity... done.
+
+del@DESKTOP-KK061A4 MINGW64 /newone
+$ ls    //查看当前目录下的文件夹
+asiainfo_hn_study/
+
+$ cd asiainfo_hn_study/src/main/webapp/chapter1 //必须是次目录下
+
+$ git add zhangle   //添加要提交的文件
+
+/*每次可以输入 git status  查看状态*/
+
+$ git commit -m "zl"  //想添加的文件 备注 名为zl 可以任意填写
+
+$ git pull   //更新
+ 
+$ git push   //提交到github 远程仓库
+
+
+
+
+
+
+

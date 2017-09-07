@@ -9,21 +9,22 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/chapter1/zhangyang/week6_day_05/css/register.css">
 </head>
 <body>
     <form action="/RegisterServlet" method="post">
-        <table align = "center" border="1" style="border-collapse: collapse;">
+        <table class="t1">
             <tr>
                 <td colspan="2">用户注册</td>
             </tr>
             <tr>
                 <td>用户名：</td>
-                <td><input type="text" name="userName" required/></td>
+                <td><input class="i1" type="text" name="userName" required/></td>
             </tr>
             <tr>
                 <td>密码：</td>
                 <td>
-                    <input type="password" name="userPassword" required/>
+                    <input class="i1" type="password" name="userPassword" required/>
                 </td>
             </tr>
             <tr>

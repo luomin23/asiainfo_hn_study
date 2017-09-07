@@ -1,0 +1,25 @@
+body{
+    background-color: #d4d4d4;
+    font-size: 20px;
+    font-family: "Angsana New";
+}
+body a{
+    text-decoration: none;
+}
+body a:link, body a:visited{
+    color: #2e6da4;
+}
+body a:hover{
+    color: #B50000;
+    text-decoration:underline;
+}
+body hr{
+    height:50px;border:none;
+    border-top:10px groove skyblue;
+    border-top:10px groove skyblue;
+}
+body p{
+    text-align: center;
+    font-size: 30px;
+    color: #c12e2a;
+}

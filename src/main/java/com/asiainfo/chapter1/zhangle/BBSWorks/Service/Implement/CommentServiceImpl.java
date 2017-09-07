@@ -18,4 +18,14 @@ public class CommentServiceImpl implements CommentService {
         PageInfo pageInfo=dao.selectAllComment(page,pagecounts);
         return pageInfo;
     }
+
+    @Override
+    public void deletComments(int id) {
+        dao.deletCommentById(id);
+    }
+
+    @Override
+    public void insertComment(String username, String comment) {
+        dao.insertComment(username,comment);
+    }
 }

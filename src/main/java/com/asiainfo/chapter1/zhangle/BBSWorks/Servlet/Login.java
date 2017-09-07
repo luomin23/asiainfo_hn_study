@@ -26,7 +26,9 @@ public class Login extends HttpServlet {
             //登录成功
                 HttpSession session = request.getSession();
                 session.setAttribute("loginFlag", "pass");
-                session.setAttribute("userInfo", user);
+                String username=user.getTelephone();
+                session.setAttribute("userInfo", username);
+                System.out.println("用户名:"+ username);
                 System.out.println("登录成功");
                 request.getRequestDispatcher("../chapter1/zhangle/BBSWorks/Person.jsp").forward(request, response);
 

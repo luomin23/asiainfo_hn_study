@@ -4,10 +4,14 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
     <display-name>Archetype Created Web Application</display-name>
+    <!--<servlet>
+        <init-param>
+            <param-name>company</param-name>
+            <param-value>asiainfo</param-value>
+        </init-param>
+        <servlet-name>Servlet4PostValue</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.luomin.servlet.Servlet4PostValue</servlet-class>
 
-    <servlet>
-        <servlet-name>ContextAttributeListenerServlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.liuhj.August21.AttributeListenDemo.ContextAttributeListenerServlet</servlet-class>
         <servlet-name>TestServlet01</servlet-name>
         <servlet-class>com.asiainfo.chapter1.hanjunwen.JavaWebDemo01.TestServlet</servlet-class>
         <servlet-name>HelloServlet</servlet-name>
@@ -15,11 +19,17 @@
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>ContextAttributeListenerServlet</servlet-name>
-        <url-pattern>/ContextAttributeListenerServlet</url-pattern>
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/HelloServlet</url-pattern>
     </servlet-mapping>-->
+   <servlet>
+        <servlet-name>AddMessageServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.dongwenchao.web.AddMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddMessageServlet</servlet-name>
+        <url-pattern>/AddMessageServlet</url-pattern>
+    </servlet-mapping>
     <!--韩俊文-->
     <!--用户登录--> <servlet>
     <servlet-name>HandleUserLogin</servlet-name>
@@ -30,7 +40,14 @@
         <servlet-name>HandleUserLogin</servlet-name>
         <url-pattern>/tologin</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_04.TestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/TestServlet</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>lhjDemoServlet</servlet-name>
         <servlet-class>com.asiainfo.chapter1.liuhj.August21.FilterDemo.lhjDemoServlet</servlet-class>
@@ -39,20 +56,135 @@
         <servlet-name>lhjDemoServlet</servlet-name>
         <url-pattern>/lhjDemoServlet</url-pattern>
     </servlet-mapping>
-
-
-
-    <!--&lt;!&ndash;设置session的时间为1分钟&ndash;&gt;-->
-    <!--<session-config>-->
-    <!--<session-timeout>1</session-timeout>-->
-    <!--</session-config>-->
-    <!--<listener>-->
-    <!--<listener-class>com.asiainfo.chapter1.liuhj.August21.AttributeListener.lhjAttributeListener</listener-class>-->
-    <!--</listener>-->
-    <!--<listener>-->
-    <!--<listener-class>com.asiainfo.chapter1.liuhj.August21.AttributeListener.lhjSessionAttrListener</listener-class>-->
-    <!--</listener>-->
-
+    <!-- 张扬-->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_04.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>HobbyServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_05.HobbyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HobbyServlet</servlet-name>
+        <url-pattern>/HobbyServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginServlet01</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week5_day_05.LoginServlet01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet01</servlet-name>
+        <url-pattern>/LoginServlet01</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CookieDemo01</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week6_day_02.CookieDemo01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieDemo01</servlet-name>
+        <url-pattern>/CookieDemo01</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week7_day_03.servlet.RegsiterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginCheckServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week7_day_03.servlet.LoginCheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginCheckServlet</servlet-name>
+        <url-pattern>/LoginCheckServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddStudentServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week7_day_03.servlet.AddStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddStudentServlet</servlet-name>
+        <url-pattern>/AddStudentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>QueryStudentServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week7_day_03.servlet.QueryStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QueryStudentServlet</servlet-name>
+        <url-pattern>/QueryStudentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GetStudentServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week7_day_03.servlet.GetStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetStudentServlet</servlet-name>
+        <url-pattern>/GetStudentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RemoveStudentServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week7_day_03.servlet.RemoveStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RemoveStudentServlet</servlet-name>
+        <url-pattern>/RemoveStudentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week7_day_03.servlet.UpdateStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <url-pattern>/UpdateStudentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>QueryStudentBySname</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week7_day_03.servlet.QueryStudentBySname</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QueryStudentBySname</servlet-name>
+        <url-pattern>/QueryStudentBySname</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week7_day_03.servlet.UploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Download</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangyang.week7_day_03.servlet.Download</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Download</servlet-name>
+        <url-pattern>/Download</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>LoginFilterZ</filter-name>
+        <filter-class>com.asiainfo.chapter1.zhangyang.week7_day_03.servlet.LoginFilterZ</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilterZ</filter-name>
+        <url-pattern>/chapter1/zhangyang/week7_day_03/addStudent.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>LoginFilterZ</filter-name>
+        <url-pattern>/chapter1/zhangyang/week7_day_03/queryStudent.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>LoginFilterZ</filter-name>
+        <url-pattern>/chapter1/zhangyang/week7_day_03/updatesStudent.jsp</url-pattern>
+    </filter-mapping>
     <filter>
         <filter-name>lhjDemoFilter</filter-name>
         <filter-class>com.asiainfo.chapter1.liuhj.August21.Filter.lhjDemoFilter</filter-class>
@@ -72,7 +204,6 @@
 
     <filter-mapping>
         <filter-name>lhjDemoFilter</filter-name>
-        <servlet-name>ContextAttributeListenerServlet</servlet-name>
         <url-pattern>/chapter1/liuhj/Demo.jsp</url-pattern>
     </filter-mapping>
 
@@ -80,11 +211,9 @@
         <filter-name>lhjDemo1Filter</filter-name>
         <filter-class>com.asiainfo.chapter1.liuhj.August21.Filter.lhjDemo1Filter</filter-class>
     </filter>
-
     <filter-mapping>
         <filter-name>lhjDemo1Filter</filter-name>
-        <servlet-name>ContextAttributeListenerServlet</servlet-name>
-        <url-pattern>/chapter1/liuhj/Demo.jsp</url-pattern>
+         <url-pattern>/chapter1/liuhj/Demo.jsp</url-pattern>
     </filter-mapping>
 
 
@@ -96,6 +225,246 @@
         <filter-name>EncodingFilter</filter-name>
         <url-pattern>/lhjDemoServlet</url-pattern>
     </filter-mapping>
+    <servlet>
+        <servlet-name>SconfigServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August14.SconfigServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SconfigServlet</servlet-name>
+        <url-pattern>/SconfigServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Demo2Servlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August14.Demo2Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Demo2Servlet</servlet-name>
+        <url-pattern>/Demo2Servlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>GetSconfigServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August14.GetSconfigServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetSconfigServlet</servlet-name>
+        <url-pattern>/GetSconfigServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DispatchingServlet1</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August15.DispatchingServlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DispatchingServlet1</servlet-name>
+        <url-pattern>/DispatchingServlet1</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DispatchingServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August15.DispatchingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DispatchingServlet</servlet-name>
+        <url-pattern>/DispatchingServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ReadconfigServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August15.ReadconfigServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReadconfigServlet</servlet-name>
+        <url-pattern>/ReadconfigServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>OutServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August15.Response.OutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OutServlet</servlet-name>
+        <url-pattern>/OutServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>RedirectServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August15.Response.RedirectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectServlet</servlet-name>
+        <url-pattern>/RedirectServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ParamServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August16.Request.ParamServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ParamServlet</servlet-name>
+        <url-pattern>/ParamServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August16.Request.DispatcherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <url-pattern>/DispatcherServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DemoServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August16.Request.DemoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DemoServlet</servlet-name>
+        <url-pattern>/DemoServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>IncludeServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August17.Request.IncludeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IncludeServlet</servlet-name>
+        <url-pattern>/IncludeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>TextServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.liuhj.August17.Request.TextServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TextServlet</servlet-name>
+        <url-pattern>/TextServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangle.ServletDay2.GetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetServlet</servlet-name>
+        <url-pattern>/get</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>testServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangle.ServletDay2.TestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>testServlet</servlet-name>
+        <url-pattern>/Ztest</url-pattern>
+    </servlet-mapping>
+    <!--Cookie-->
+    <servlet>
+        <servlet-name>cookie</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangle.ServletDay2.CookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cookie</servlet-name>
+        <url-pattern>/cookieServlet</url-pattern>
+    </servlet-mapping>
+    <!--filter 编码格式过滤  /*过滤所有的servlet-->
+    <filter>
+        <filter-name>zlencodingfilter</filter-name>
+        <filter-class>com.asiainfo.chapter1.zhangle.ServletDay2.FilterServlet</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>zlencodingfilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+
+
+    <servlet>
+        <servlet-name>AddtServlet</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.dongwenchao.web.day2.AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddtServlet</servlet-name>
+        <url-pattern>/AddServlet</url-pattern>
+    </servlet-mapping>
+    <!--filter 字符编码格式过滤  /*过滤所有的servlet-->
+
+    <filter>
+        <filter-name>CharactorFilter</filter-name>
+        <filter-class>com.asiainfo.chapter1.dongwenchao.web.day2.CharactorFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharactorFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet1</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.dongwenchao.web.day1.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet1</servlet-name>
+        <url-pattern>/LoginServlet1</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>CountFilter</filter-name>
+        <filter-class>com.asiainfo.chapter1.dongwenchao.web.day1.CountFilter</filter-class>
+        <init-param>
+            <param-name>count</param-name>
+            <param-value>5000</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CountFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet2</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.dongwenchao.web.day1.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TestServlet1</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.dongwenchao.web.day2.TestServlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet1</servlet-name>
+        <url-pattern>/TestServlet1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet2</servlet-name>
+        <url-pattern>/login.do</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>com.asiainfo.chapter1.dongwenchao.web.day1.IndexFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/login.jsp</url-pattern>
+    </filter-mapping>
+    <listener>
+        <listener-class>com.asiainfo.chapter1.dongwenchao.web.day2.Listener</listener-class>
+    </listener>
+
+
+    <servlet>
+        <servlet-name>loginLiener</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.dongwenchao.web.day3.loginLiener</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginLiener</servlet-name>
+        <url-pattern>/loginLiener</url-pattern>
+    </servlet-mapping>
+
     <!--filter 编码格式过滤  /*过滤所有的servlet-->
     <filter>
         <filter-name>encodingfilter</filter-name>
@@ -114,6 +483,38 @@
         <filter-name>loginfilterzl</filter-name>
         <url-pattern>/zl/talks</url-pattern>
     </filter-mapping>
+    <servlet>
+        <servlet-name>insertcomment</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangle.BBSWorks.Servlet.InsertCommentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>insertcomment</servlet-name>
+        <url-pattern>/zl/insertcomment</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteallComment</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangle.BBSWorks.Servlet.DeleteAllCommentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteallComment</servlet-name>
+        <url-pattern>/zl/commentDeleteAll</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteComment</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangle.BBSWorks.Servlet.DeleteCommentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteComment</servlet-name>
+        <url-pattern>/zl/deletecomment</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>filedown</servlet-name>
+        <servlet-class>com.asiainfo.chapter1.zhangle.BBSWorks.Servlet.DownFileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>filedown</servlet-name>
+        <url-pattern>/zl/downfile</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>datepaging</servlet-name>
         <servlet-class>com.asiainfo.chapter1.zhangle.BBSWorks.Servlet.DatePagingServlet</servlet-class>
@@ -171,101 +572,4 @@
         <servlet-name>personServlet</servlet-name>
         <url-pattern>/zl/personServlet</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>registservlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.liuwy.August18.RegistServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>registservlet</servlet-name>
-        <url-pattern>/registservlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>selectservlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.liuwy.August18.SelectServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>selectservlet</servlet-name>
-        <url-pattern>/selectservlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>deleteservlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.liuwy.August21.DeleteServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>deleteservlet</servlet-name>
-        <url-pattern>/deleteservlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>updateservlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.liuwy.August21.UpdateServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>updateservlet</servlet-name>
-        <url-pattern>/updateservlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>loginservlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.liuwy.demo.LoginServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>loginservlet</servlet-name>
-        <url-pattern>/loginservlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>uploadservlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.liuwy.demo.UploadServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>uploadservlet</servlet-name>
-        <url-pattern>/uploadservlet.do</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>findpageservlet</servlet-name>
-        <servlet-class>com.asiainfo.chapter1.liuwy.demo.FindPageServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>findpageservlet</servlet-name>
-        <url-pattern>/findpageservlet.do</url-pattern>
-    </servlet-mapping>
-
-    <filter>
-        <filter-name>ecodingfilter</filter-name>
-        <filter-class>com.asiainfo.chapter1.liuwy.demo.EcodingFiter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>ecodingfilter</filter-name>
-        <url-pattern>*.do</url-pattern>
-    </filter-mapping>
-    <filter>
-        <filter-name>loginfilter</filter-name>
-        <filter-class>com.asiainfo.chapter1.liuwy.demo.LoginFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>loginfilter</filter-name>
-        <url-pattern>/chapter1/liuwy/demo/manager/*</url-pattern>
-    </filter-mapping>
-    <filter-mapping>
-        <filter-name>loginfilter</filter-name>
-        <url-pattern>/chapter1/liuwy/demo/message/*</url-pattern>
-    </filter-mapping>
-    <filter-mapping>
-        <filter-name>loginfilter</filter-name>
-        <url-pattern>/chapter1/liuwy/demo/user/*</url-pattern>
-    </filter-mapping>
-    <filter>
-        <filter-name>deletefilter</filter-name>
-        <filter-class>com.asiainfo.chapter1.liuwy.demo.DeleteFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>deletefilter</filter-name>
-        <url-pattern>/deleteservlet.do</url-pattern>
-    </filter-mapping>
-    <filter>
-        <filter-name>updatefilter</filter-name>
-        <filter-class>com.asiainfo.chapter1.liuwy.demo.UpdateFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>updatefilter</filter-name>
-        <url-pattern>/updateservlet.do</url-pattern>
-    </filter-mapping>
 </web-app>

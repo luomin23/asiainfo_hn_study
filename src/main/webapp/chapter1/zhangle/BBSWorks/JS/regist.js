@@ -68,6 +68,15 @@ function addPing(){
     li.appendChild(image);
 
 }
+function commentdelete() {
+    if(!confirm("确认要删除这条评论吗？")){
+        window.event.returnValue = false;
+        return false;
+    }else {
+        return true;
+    }
+
+}
 function delPing(){
     if(!confirm("确认要删除这条评论吗？")){
         window.event.returnValue = false;
@@ -80,10 +89,15 @@ function delPing(){
             a=li[i];
             a.index=i;
         }
-
-
-
-
+    }
+}
+/*
+* 评论全选的复选框
+* */
+function checkAll() {
+   var select=document.getElementsByName("selectComment");
+    for(var i=0;i<select.length;i++){
+        select[i].checked=true;
     }
 }
 function upFunction(){
