@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.3.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+    <!-- 开启注解驱动 -->
+    <!-- 这样可以使用@Controller这些注解 默认使用jackjson来解析的,按照下面替换下就可以使用fastjson了 -->
+    <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager">
+
+        <!--spring mvc 4.2以上版本配置fastjson-->
+        <!--<mvc:message-converters register-defaults="true">
+            <ref bean="stringHttpMessageConverter" />
+            <ref bean="fastJsonHttpMessageConverter" />
+        </mvc:message-converters>-->
+    </mvc:annotation-driven>
+
+    <!--spring mvc 4.2以上版本配置fastjson begin-->
+    <bean id="stringHttpMessageConverter"
+          class="org.springframework.http.converter.StringHttpMessageConverter">
+        <constructor-arg value="UTF-8" index="0"></constructor-arg>
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/plain;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="fastJsonHttpMessageConverter" class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+                <value>application/json;charset=UTF-8</value>
+            </list>
+        </property>
+        <property name="fastJsonConfig">
+            <bean class="com.alibaba.fastjson.support.config.FastJsonConfig">
+                <property name="features">
+                    <list>
+                        <value>AllowArbitraryCommas</value>
+                        <value>AllowUnQuotedFieldNames</value>
+                        <value>DisableCircularReferenceDetect</value>
+                    </list>
+                </property>
+                <property name="dateFormat" value="yyyy-MM-dd HH:mm:ss"></property>
+            </bean>
+        </property>
+    </bean>
+    <!--spring mvc 4.2以上版本配置fastjson end-->
+
+
+    <!-- 开启controller注解支持 -->
+    <!-- use-default-filters="false" 只扫描指定的注解 -->
+    <context:component-scan base-package="com.asiainfo.chapter2" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!-- 映射静态文件 -->
+    <mvc:view-controller path="/" view-name="forward:/home/index"/>
+
+    <!-- 静态资源访问，方案1 -->
+    <!--
+    <mvc:resources mapping="/css/**" location="/WEB-INF/statics/css/"/>
+    <mvc:resources mapping="/js/**" location="/WEB-INF/statics/js/"/>
+    <mvc:resources mapping="/image/**" location="/WEB-INF/statics/image/"/>
+    -->
+
+    <!-- 静态资源访问，方案2 (表示不对静态资源如CSS、JS、HTML等进行拦截) -->
+    <mvc:default-servlet-handler/>
+
+    <!-- bean name view resolver -->
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0"/>
+
+    <!-- Spring MVC JSON配置 -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+          p:ignoreDefaultModelOnRedirect="true">
+        <property name="messageConverters">
+            <list>
+                <bean id="mappingJacksonHttpMessageConverter"
+                      class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                    <property name="supportedMediaTypes" value="application/json;charset=UTF-8"/>
+                </bean>
+                <bean id="mappingStringHttpMessageConverter"
+                      class="org.springframework.http.converter.StringHttpMessageConverter">
+                    <property name="supportedMediaTypes" value="text/plain;charset=UTF-8"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 配置内容协商视图解析 -->
+    <bean id="contentNegotiatingViewResolver"
+          class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <!-- 设置优先级 -->
+        <property name="order" value="1"/>
+        <!-- 设置内容协商管理器 -->
+        <property name="contentNegotiationManager" ref="contentNegotiationManager"></property>
+        <!-- 设置默认的候选视图，如果有合适的MIME类型，将优先从以下选择视图，找不到再在整个Spring容器里寻找已注册的合适视图 -->
+        <property name="defaultViews">
+            <list>
+                <bean class="org.springframework.web.servlet.view.InternalResourceView">
+                    <property name="url" value="WEB-INF/views/hello.jsp"></property>
+                </bean>
+                <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
+                <ref bean="myXmlView"/>
+                <bean class="com.asiainfo.chapter2.luomin.view.ExcelView"/>
+            </list>
+        </property>
+        <!-- 设置视图解析器 -->
+        <property name="viewResolvers">
+            <list>
+                <ref bean="defalutViewResolver"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="defalutViewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="contentType" value="text/html"/>
+        <property name="prefix" value="/WEB-INF/views/"/><!--设置JSP文件的目录位置-->
+        <property name="suffix" value=".jsp"/>
+        <property name="exposeContextBeansAsAttributes" value="true"/>
+    </bean>
+
+    <!-- XML视图 -->
+    <bean id="myXmlView"
+          class="org.springframework.web.servlet.view.xml.MarshallingView">
+        <property name="modelKey" value="articles"/>
+        <property name="marshaller">
+            <bean class="org.springframework.oxm.xstream.XStreamMarshaller" p:autodetectAnnotations="true">
+                <property name="streamDriver">
+                    <bean class="com.thoughtworks.xstream.io.xml.StaxDriver"/>
+                </property>
+                <property name="supportedClasses">
+                    <list>
+                        <value>java.util.Collection</value>
+                        <value>com.asiainfo.chapter2.luomin.entity.Home</value>
+                    </list>
+                </property>
+                <property name="aliases">
+                    <map>
+                        <entry key="home" value="com.asiainfo.chapter2.luomin.entity.Home"/>
+                        <!-- Account这个类的别名就变成了myBeans，那么转换后的xml中就是myBeans -->
+                        <entry key="myBeans" value="com.asiainfo.chapter2.luomin.entity.Account"/>
+
+                    </map>
+                </property>
+                <!-- 基本属性别名 -->
+                <property name="fieldAliases">
+                    <map>
+                        <!-- Account中的brithday这个属性 -->
+                        <entry key="com.asiainfo.chapter2.luomin.entity.Account.birthday" value="birthday"/>
+                    </map>
+                </property>
+
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="contentNegotiationManager"
+          class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+
+        <!-- 设置默认的MIME类型，如果没有指定拓展名或请求参数，则使用此默认MIME类型解析视图 -->
+        <property name="defaultContentType" value="text/html"/>
+        <!-- 是否不适用请求头确定MIME类型 -->
+        <property name="ignoreAcceptHeader" value="true"/>
+        <!-- 是否根据路径拓展名确定MIME类型 -->
+        <property name="favorPathExtension" value="false"/>
+        <!-- 是否使用参数来确定MIME类型 -->
+        <property name="favorParameter" value="true"/>
+        <!-- 上一个属性配置为true,我们指定type请求参数判断MIME类型 -->
+        <property name="parameterName" value="type"/>
+        <!-- 根据请求参数或拓展名映射到相应的MIME类型 -->
+        <property name="mediaTypes">
+            <map>
+                <entry key="html" value="text/html"/>
+                <entry key="xml" value="application/xml"/>
+                <entry key="json" value="application/json"/>
+                <entry key="excel" value="application/vnd.ms-excel"></entry>
+            </map>
+        </property>
+
+    </bean>
+
+
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver"
+            id="freeMaker">
+        <property name="prefix" value="fm_"/><!-- 指定文件前缀 -->
+        <property name="suffix" value=".ftl"/><!-- 指定文件后缀 -->
+        <property name="order" value="1"/><!-- 指定当前视图解析器的优先级 -->
+        <property name="contentType" value="text/html; charset=utf-8"/>
+        <!-- 指定编码类型输出，防止出现中文乱码现象 -->
+    </bean>
+    <!-- ftl参数配置 -->
+    <bean id="freemarkerConfiguration"
+          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="/WEB-INF/freemarker.properties"/>
+    </bean>
+
+<bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/freeMaker"/>
+        <!-- 指定模板文件存放位置 -->
+        <property name="defaultEncoding" value="UTF-8"/><!-- 由于模板文件中使用utf-8编码，如果不显式指定，会采用系统默认编码，易造成乱码 -->
+        <property name="freemarkerSettings"><!-- 定义FreeMaker丰富的自定义属性 -->
+            <props>
+                <prop key="classic_compatible">true</prop><!-- 当碰到对象属性为null时，返回一个空字符串而非抛出系统异常 -->
+            </props>
+        </property>
+    </bean>
+
+
+    <!--上传文件设置 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="104857600"/> <!-- 100M  1024 * 1024 * 100 -->
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxInMemorySize" value="4096"/>
+    </bean>
+
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <!-- <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <bean class="com.weixin.core.interceptors.EncodingInterceptor" />
+        </mvc:interceptor> -->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.asiainfo.chapter2.common.core.interceptors.AuthInterceptor">
+                <!-- 不需要权限验证的地址  -->
+                <property name="excludeUrls">
+                    <list>
+                        <value>wechat</value><!-- 登录页面 -->
+                        <value>checkname</value><!-- 注册时检查用户名是否重复 -->
+                        <value>register</value><!-- 注册页面 -->
+                        <value>login</value><!-- 登录操作 -->
+                        <value>logout</value><!-- 登出操作 -->
+                        <value>validatecode</value><!-- 生成验证码 -->
+                        <value>user/getUserList</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+
+</beans>
